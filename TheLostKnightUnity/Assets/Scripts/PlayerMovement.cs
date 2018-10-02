@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
     public float moveSpeed = 3.5f;
     public bool moveRight;
     public bool moveLeft;
+    public bool jump;
     public Rigidbody2D rigidbody;
     //float shipBoundaryRadius = 5f;
 
@@ -39,6 +40,11 @@ public class PlayerMovement : MonoBehaviour {
         if (moveLeft)
         {
             rigidbody.velocity = new Vector2(-moveSpeed, rigidbody.velocity.y);
+        }
+
+        if (jump)
+        {
+            rigidbody.velocity = new Vector2(moveSpeed, rigidbody.velocity.x);
         }
 
         // Restricts the player to camera view

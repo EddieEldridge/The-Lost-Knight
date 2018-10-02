@@ -31,4 +31,9 @@ public class TouchMovement : MonoBehaviour
 
             }
 
+			public void Jump()
+			{
+				player.jump=true;
+			}
+
         }
