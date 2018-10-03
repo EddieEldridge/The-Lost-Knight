@@ -9,12 +9,33 @@ public class PlayerMovement : MonoBehaviour {
     public bool moveRight;
     public bool moveLeft;
     public bool jump;
-    public Rigidbody2D rigidbody;
-    //float shipBoundaryRadius = 5f;
+    public float jumpForce;
+    bool isGrounded;
+    public Rigidbody2D playerRB;
+    public Collider2D PlayerCollider;
 
-    void Start ()
+    void OnCollisionEnter2D(Collision2D theCollision)
     {
-		rigidbody=GetComponent<Rigidbody2D>();
+        if (theCollision.gameObject.name == "Platform")
+        {
+            Debug.Log("OnGround");
+            isGrounded = true;
+        }
+    }
+
+     void OnCollisionExit2D(Collision2D theCollision)
+    {
+        if (theCollision.gameObject.name == "Platform")
+        {
+             Debug.Log("OffGround");
+            isGrounded = false;
+        }
+    }
+    void Start ()
+    {   
+        // Assign our Player's rigidybody to 'rigidbody'
+		playerRB=GetComponent<Rigidbody2D>();
+        PlayerCollider=GetComponent<Collider2D>();
 	}
 
     void Update()
@@ -23,34 +44,25 @@ public class PlayerMovement : MonoBehaviour {
         // Assign players postion to a Vector3 named pos
         Vector3 pos = transform.position;
 
-        // Movement for the ship (Vertical)
-        //pos.y += Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-       // transform.position = pos;
-
-        // Movement for the ship (Horizontal)
-       // pos.x += Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-       // transform.position = pos;
-
-
         // Android touch movement
-        if (moveRight)
+        if (moveRight==true)
         {
-            rigidbody.velocity = new Vector2(moveSpeed, rigidbody.velocity.y);
+            playerRB.velocity = new Vector2(moveSpeed, playerRB.velocity.y);
         }
-        if (moveLeft)
+        if (moveLeft==true)
         {
-            rigidbody.velocity = new Vector2(-moveSpeed, rigidbody.velocity.y);
+            playerRB.velocity = new Vector2(-moveSpeed, playerRB.velocity.y);
         }
 
-        if (jump)
+        if (jump==true && isGrounded==true)
         {
-            rigidbody.velocity = new Vector2(moveSpeed, rigidbody.velocity.x);
+            playerRB.AddForce((Vector2.up) * jumpForce); 
         }
 
         // Restricts the player to camera view
-        pos = Camera.main.WorldToViewportPoint(transform.position);
+     /*    pos = Camera.main.WorldToViewportPoint(transform.position);
         pos.x = Mathf.Clamp01(pos.x);
         pos.y = Mathf.Clamp01(pos.y);
-        transform.position = Camera.main.ViewportToWorldPoint(pos);
+        transform.position = Camera.main.ViewportToWorldPoint(pos); */
     }
 }

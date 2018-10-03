@@ -4,7 +4,7 @@ using System.Collections;
 public class TouchMovement : MonoBehaviour
         {
             private PlayerMovement player;
-
+            private Rigidbody2D rigidbody;
 
             void Start()
             {
@@ -28,12 +28,21 @@ public class TouchMovement : MonoBehaviour
             public void ReleaseRightArrow()
             {
                 player.moveRight = false;
-
             }
 
-			public void Jump()
+			public void UpArrow()
 			{
-				player.jump=true;
+				player.jump = true;
 			}
+            public void ReleaseUpArrow()
+            {
+                player.jump = false;
+            }
 
+            void Update()
+            {
+                 
+            }
+
+        
         }
