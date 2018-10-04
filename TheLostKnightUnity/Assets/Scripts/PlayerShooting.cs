@@ -5,14 +5,16 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour {
 
     // Variables
-    public GameObject bulletPrefab;
+    public GameObject arrowPrefab;
     public float fireDelay = 0.1f;
     float cooldownTimer = 0;
-    int bulletLayer;
+    int arrowLayer;
+    float offset =5 ;
+    public bool isFiring;
 
     void Start ()
     {
-        bulletLayer = gameObject.layer;
+        arrowLayer = gameObject.layer;
     }
     // Update is called once per frame
 	void Update ()
@@ -20,16 +22,16 @@ public class PlayerShooting : MonoBehaviour {
         cooldownTimer -= Time.deltaTime;
 
         // Shooting script
-		if(Input.GetButton("Fire1") && cooldownTimer <=0)
+		if(isFiring ==true && cooldownTimer <=0)
         {
-           // Debug.Log("Player Shooting!");
+            Debug.Log("Player Shooting!");
 
             // Set delay in between shots
             cooldownTimer = fireDelay;
 
             // Create instance of bulletPrefab every time player 'fires'
-            GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
-            bulletGO.layer = bulletLayer;
+            GameObject arrowGO = (GameObject)Instantiate(arrowPrefab, transform.position +(offset *transform.forward), Quaternion.identity);
+            arrowGO.layer = arrowLayer;
         }
 	}
 }

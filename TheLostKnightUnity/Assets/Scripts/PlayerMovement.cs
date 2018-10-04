@@ -11,14 +11,14 @@ public class PlayerMovement : MonoBehaviour {
     public bool jump;
     public float jumpForce;
     bool isGrounded;
-    public Rigidbody2D playerRB;
-    public Collider2D PlayerCollider;
+    Rigidbody2D playerRB;
+    Collider2D PlayerCollider;
 
+    // Jumping and checking if the player is grounded or not
     void OnCollisionEnter2D(Collision2D theCollision)
     {
         if (theCollision.gameObject.name == "Platform")
         {
-            Debug.Log("OnGround");
             isGrounded = true;
         }
     }
@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (theCollision.gameObject.name == "Platform")
         {
-             Debug.Log("OffGround");
             isGrounded = false;
         }
     }
