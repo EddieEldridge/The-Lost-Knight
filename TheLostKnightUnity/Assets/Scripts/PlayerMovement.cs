@@ -5,16 +5,18 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     // Variables
+    Rigidbody2D playerRB;
+    Collider2D PlayerCollider;
     public float moveSpeed = 3.5f;
     public bool moveRight;
     public bool moveLeft;
     public bool jump;
     public float jumpForce;
     bool isGrounded;
-    Rigidbody2D playerRB;
-    Collider2D PlayerCollider;
+
 
     // Jumping and checking if the player is grounded or not
+    // "Changed 'Platform' to the name of the GameObject you wanna check if ur standing on it or not
     void OnCollisionEnter2D(Collision2D theCollision)
     {
         if (theCollision.gameObject.name == "Platform")
@@ -22,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
             isGrounded = true;
         }
     }
-
+     
      void OnCollisionExit2D(Collision2D theCollision)
     {
         if (theCollision.gameObject.name == "Platform")
