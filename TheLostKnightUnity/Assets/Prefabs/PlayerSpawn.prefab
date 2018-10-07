@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a9562284b9e1746b573266866c0344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 1729549207352612, guid: 061d26dfdd5acd04089da947d244276c,
+  prefabToSpawn: {fileID: 1741093888579032, guid: 33323fa08882f784ea66d58d3089f2aa,
     type: 2}
-  respawnTimer: 1
-  spawnDelay: 0
+  respawnDelay: 0
+  spawnDelay: 3
