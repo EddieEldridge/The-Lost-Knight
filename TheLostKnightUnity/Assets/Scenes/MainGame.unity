@@ -179,8 +179,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 13634625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.35, y: 12, z: 10}
-  m_LocalScale: {x: 31.126297, y: 17.46673, z: 0}
+  m_LocalPosition: {x: 82.3, y: 55.6, z: 10}
+  m_LocalScale: {x: 374.65363, y: 127.40615, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -772,7 +772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b311ea2508cfd40a7715d18c7ab9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
+  moveSpeed: 10
   moveRight: 0
   moveLeft: 0
   jump: 0
@@ -992,8 +992,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944055615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.35, y: 1.27, z: 0}
-  m_LocalScale: {x: 31.026451, y: 4.2990794, z: 1}
+  m_LocalPosition: {x: 5.2, y: -12.1, z: 0}
+  m_LocalScale: {x: 423.51105, y: 14.455654, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1033,6 +1033,7 @@ GameObject:
   - component: {fileID: 2020868137}
   - component: {fileID: 2020868136}
   - component: {fileID: 2020868135}
+  - component: {fileID: 2020868138}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1093,13 +1094,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2020868134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3, y: 8.3, z: -10}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.4, y: 12.2, z: -50}
+  m_LocalScale: {x: 15.375, y: 22.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2020868138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2020868134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 663636ac409d91b409516d4a100aa1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1909464804}
+  smoothSpeed: 5
 --- !u!1 &2146086243
 GameObject:
   m_ObjectHideFlags: 0
