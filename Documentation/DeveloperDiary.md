@@ -23,3 +23,6 @@ Yesterday I tried to implement the movement features from Zephyr into The Lost K
 I did however manage to implement some nice camera movement into The Lost Knight with a simple one line script. It has a nice smoothing effect which can be adjusted and I am happy with it.
 
 Today I hope to be able to make a sprite so I can start work on melee attacking and and animations for attacking and dashing as these are core gameplay mechanics and should be started on sooner rather than later.
+
+<b>Update</b>
+I managed to successfully make a sprite I was happy with along with an extremely basic 2 frame walking animation that currently looks awful but I will put more time into later. My idea for the sprite is that the player character will be monochrome and the backgrounds of each level will be unique and have a distinct color theme. This is to give the idea that the knight is 'lost' as the world he is currently in his very different from his own, hence the color contrasts.

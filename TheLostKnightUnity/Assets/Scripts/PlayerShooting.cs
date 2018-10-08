@@ -30,7 +30,7 @@ public class PlayerShooting : MonoBehaviour {
             cooldownTimer = fireDelay;
 
             // Create instance of bulletPrefab every time player 'fires'
-            GameObject arrowGO = (GameObject)Instantiate(arrowPrefab, transform.position +(offset *transform.forward), Quaternion.identity);
+            GameObject arrowGO = (GameObject)Instantiate(arrowPrefab, transform.position +(offset * transform.forward), Quaternion.identity);
             arrowGO.layer = arrowLayer;
         }
 	}

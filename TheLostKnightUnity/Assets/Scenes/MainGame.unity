@@ -409,7 +409,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 2.25}
+    oldSize: {x: 0.86, y: 1.83}
     newSize: {x: 2.25, y: 2.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -463,6 +463,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dc6059ec8557549b43bebef9088075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &631221923
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631221920}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e08ab69b3e85344b96d265830ebd92f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &631221927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4343614955702402, guid: 9142951a43a2f044ca71747c0d46a546,
