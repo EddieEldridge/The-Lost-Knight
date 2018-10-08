@@ -14,7 +14,15 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpForce;
     bool isGrounded;
 
+    // variable to hold a reference to our SpriteRenderer component
+    private SpriteRenderer mySpriteRenderer;
 
+    // This function is called just one time by Unity the moment the game loads
+    private void Awake()
+    {
+        // get a reference to the SpriteRenderer component on this gameObject
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+    }
     // Jumping and checking if the player is grounded or not
     // "Changed 'Platform' to the name of the GameObject you wanna check if ur standing on it or not
     void OnCollisionEnter2D(Collision2D theCollision)
@@ -45,19 +53,30 @@ public class PlayerMovement : MonoBehaviour {
         // Assign players postion to a Vector3 named pos
         Vector3 pos = transform.position;
 
-        // Android touch movement
-        if (moveRight==true)
+        // if the variable isn't empty (we have a reference to our SpriteRenderer)
+        if (mySpriteRenderer != null)
         {
-            playerRB.velocity = new Vector2(moveSpeed, playerRB.velocity.y);
-        }
-        if (moveLeft==true)
-        {
-            playerRB.velocity = new Vector2(-moveSpeed, playerRB.velocity.y);
-        }
+            
+            // Android touch movement
+            if (moveRight==true)
+            {
+                playerRB.velocity = new Vector2(moveSpeed, playerRB.velocity.y);
+                
+                // flip the sprite
+                mySpriteRenderer.flipX = false;
+            }
+            if (moveLeft==true)
+            {
+                playerRB.velocity = new Vector2(-moveSpeed, playerRB.velocity.y);
+                // flip the sprite
+                mySpriteRenderer.flipX = true;
 
-        if (jump==true && isGrounded==true)
-        {
-            playerRB.AddForce((Vector2.up) * jumpForce); 
+            }
+
+            if (jump==true && isGrounded==true)
+            {
+                playerRB.AddForce((Vector2.up) * jumpForce); 
+            }
         }
 
         // Restricts the player to camera view

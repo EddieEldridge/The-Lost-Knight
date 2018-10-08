@@ -375,6 +375,15 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 3.0973268
       objectReference: {fileID: 0}
+    - target: {fileID: 114292162598893050, guid: 9142951a43a2f044ca71747c0d46a546,
+        type: 2}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330321111541362, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 60390646551983018, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
@@ -443,6 +452,17 @@ PolygonCollider2D:
       - {x: -0.125, y: -0.895}
       - {x: 0.015, y: -0.72499996}
       - {x: 0.085, y: -0.66499996}
+--- !u!114 &631221922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631221920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3dc6059ec8557549b43bebef9088075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &631221927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4343614955702402, guid: 9142951a43a2f044ca71747c0d46a546,
