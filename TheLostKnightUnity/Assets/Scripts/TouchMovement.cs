@@ -7,11 +7,13 @@ public class TouchMovement : MonoBehaviour
     private PlayerMovement player;
     private Rigidbody2D rigidbody;
     private PlayerShooting playerShooting;
+    private PlayerAttack playerAttacking;
 
      void Start()
     {
                 player = FindObjectOfType<PlayerMovement>();
                 playerShooting = FindObjectOfType<PlayerShooting>();
+                playerAttacking = FindObjectOfType<PlayerAttack>();
     }
 
     public void LeftArrow()
@@ -55,4 +57,10 @@ public class TouchMovement : MonoBehaviour
     {
         playerShooting.isFiring = false;
     }
+
+    public void AttackButton()
+    {
+        playerAttacking.isAttacking=true;
+    }
+
 }

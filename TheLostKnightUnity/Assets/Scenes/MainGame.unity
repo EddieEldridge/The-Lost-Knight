@@ -113,6 +113,106 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &61889401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 61889402}
+  - component: {fileID: 61889405}
+  - component: {fileID: 61889404}
+  - component: {fileID: 61889403}
+  m_Layer: 5
+  m_Name: SwordAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &61889402
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61889401}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5172739, y: 0.32119656, z: 1.0003073}
+  m_Children: []
+  m_Father: {fileID: 1617780839}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 570.2, y: 118}
+  m_SizeDelta: {x: 112.9, y: 241.98}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &61889403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61889401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1617780840}
+          m_MethodName: AttackButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &61889404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61889401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.972549, g: 0.7264446, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 0bca329f553721242af1c67975c3e5ec, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &61889405
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61889401}
+  m_CullTransparentMesh: 0
 --- !u!1 &79142528
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,11 +763,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4156368427228864, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 12.14
       objectReference: {fileID: 0}
     - target: {fileID: 4156368427228864, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.9
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 4156368427228864, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
       propertyPath: m_LocalPosition.z
@@ -708,6 +808,12 @@ Prefab:
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114347150864218548, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: bloodEffect
+      value: 
+      objectReference: {fileID: 21300000, guid: c3a1cb5c231664e46971e5e2e549b80e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
   m_IsPrefabAsset: 0
@@ -741,6 +847,7 @@ RectTransform:
   - {fileID: 1351185893}
   - {fileID: 79142529}
   - {fileID: 2146086244}
+  - {fileID: 61889402}
   m_Father: {fileID: 824844067}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1176,7 +1283,7 @@ GameObject:
   - component: {fileID: 2146086246}
   - component: {fileID: 2146086245}
   m_Layer: 5
-  m_Name: Fire
+  m_Name: BowAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1266,7 +1373,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 307b184ac2071154f94f38605487a34f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab35fad84674f874c98e71aa3be57b51, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

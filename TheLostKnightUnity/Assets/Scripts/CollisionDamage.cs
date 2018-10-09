@@ -9,7 +9,7 @@ public class CollisionDamage : MonoBehaviour {
     public int health;
     float invulnTimer = 0;
     int correctLayer;
-
+    
     SpriteRenderer spriteRenderer;
 
     void Start()

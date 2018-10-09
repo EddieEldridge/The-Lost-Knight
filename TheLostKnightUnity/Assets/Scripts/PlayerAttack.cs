@@ -12,13 +12,14 @@ public class PlayerAttack : MonoBehaviour {
 	public LayerMask whatIsEnemies;
 	public float attackRange;
 	public int damage;
+    public bool isAttacking=false;
 
 	// Update is called once per frame
 	void Update ()
 	{
 		if(timeBetweenAttack<=0)
 		{
-			if(Input.GetKey(KeyCode.Space))
+			if(isAttacking == true)
 			{
 				Debug.Log("Player attacking");
 				timeBetweenAttack = startTimeBetweenAttack;
