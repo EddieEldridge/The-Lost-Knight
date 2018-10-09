@@ -6,7 +6,7 @@ public class CollisionDamage : MonoBehaviour {
 
     // Variables
     public float invulnPeriod = 0;
-    public int health = 100;
+    public int health;
     float invulnTimer = 0;
     int correctLayer;
 
@@ -78,5 +78,11 @@ public class CollisionDamage : MonoBehaviour {
     void Die()
     {
         Destroy(gameObject);
+    }
+
+    public void takeDamage(int damage)
+    {
+        Debug.Log("Damage taken by enemy!");
+        health -= damage;
     }
 }
