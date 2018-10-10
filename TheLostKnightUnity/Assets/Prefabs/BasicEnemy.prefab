@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576233333379856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.3, y: -5.5, z: 0}
+  m_LocalPosition: {x: 26, y: -7, z: 0}
   m_LocalScale: {x: 2.844094, y: 2.746531, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,17 +115,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceccdbfe65edc734591736a7ede4496c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 20
   pointA: {fileID: 0}
   pointB: {fileID: 0}
-  reverseMove: 0
+  reverseMove: 1
   objectToUse: {fileID: 4156368427228864}
   moveThisObject: 1
   player: {fileID: 0}
-  maxDistance: 100
-  minimumDistance: 50
-  isPatrolling: 1
-  isChasing: 0
+  maxDistance: 198
+  minimumDistance: 13
+  isPatrolling: 0
+  isChasing: 1
 --- !u!212 &212784365622824382
 SpriteRenderer:
   m_ObjectHideFlags: 1

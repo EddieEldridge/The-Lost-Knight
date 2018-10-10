@@ -58,9 +58,7 @@ public class EnemyBehaviour : MonoBehaviour {
                         isChasing=true;
 
                         // Rotates the transform to face the player
-                        //transform.LookAt(player);
-                        // Move towards the player
-                        transform.position += transform.forward * moveSpeed * Time.deltaTime;
+                        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
                     }
 
                     // If the distance between the enemy and the player is less than our maximum distance

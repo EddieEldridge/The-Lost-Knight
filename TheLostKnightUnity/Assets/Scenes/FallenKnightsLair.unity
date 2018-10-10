@@ -844,7 +844,22 @@ Prefab:
     - target: {fileID: 114732166683844060, guid: 01b4df8b0dcf0914283d8c003deee096,
         type: 2}
       propertyPath: minimumDistance
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732166683844060, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: maxDistance
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732166683844060, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: isChasing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732166683844060, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: isPatrolling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
