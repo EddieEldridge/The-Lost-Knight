@@ -93,7 +93,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1330321111541362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4, y: -4.9, z: 0}
+  m_LocalPosition: {x: -23, y: -7, z: 0}
   m_LocalScale: {x: 3.252193, y: 3.1401482, z: 1}
   m_Children:
   - {fileID: 4876742085254088}
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b311ea2508cfd40a7715d18c7ab9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 50
   moveRight: 0
   moveLeft: 0
   jump: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnPeriod: 0
   health: 1000
-  colorToTurn: {r: 0.9433962, g: 0.06674972, b: 0.06674972, a: 0}
+  colorToTurn: {r: 0.9433962, g: 0.06674972, b: 0.06674972, a: 0.57254905}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114385351829142860
 MonoBehaviour:

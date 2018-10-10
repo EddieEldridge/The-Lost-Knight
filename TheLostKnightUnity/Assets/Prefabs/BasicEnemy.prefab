@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invulnPeriod: 0
-  health: 227
+  health: 1000
   colorToTurn: {r: 0.9811321, g: 0.06016379, b: 0.06016379, a: 0.54509807}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114732166683844060
@@ -115,15 +115,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceccdbfe65edc734591736a7ede4496c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 10
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   reverseMove: 0
   objectToUse: {fileID: 4156368427228864}
-  moveThisObject: 0
+  moveThisObject: 1
   player: {fileID: 0}
-  maxDistance: 10
-  minimumDistance: 5
+  maxDistance: 100
+  minimumDistance: 50
+  isPatrolling: 1
+  isChasing: 0
 --- !u!212 &212784365622824382
 SpriteRenderer:
   m_ObjectHideFlags: 1

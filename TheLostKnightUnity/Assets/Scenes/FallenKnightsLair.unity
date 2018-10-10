@@ -367,11 +367,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4343614955702402, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.2
+      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 4343614955702402, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.4
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 4343614955702402, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
       propertyPath: m_LocalPosition.z
@@ -396,11 +396,6 @@ Prefab:
     - target: {fileID: 4343614955702402, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114292162598893050, guid: 9142951a43a2f044ca71747c0d46a546,
-        type: 2}
-      propertyPath: colorToTurn.a
-      value: 0.57254905
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
@@ -796,11 +791,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4156368427228864, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 47.3
+      value: 49.2
       objectReference: {fileID: 0}
     - target: {fileID: 4156368427228864, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.5
+      value: -8.3
       objectReference: {fileID: 0}
     - target: {fileID: 4156368427228864, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
       propertyPath: m_LocalPosition.z
@@ -840,21 +835,16 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114347150864218548, guid: 01b4df8b0dcf0914283d8c003deee096,
-        type: 2}
-      propertyPath: health
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114732166683844060, guid: 01b4df8b0dcf0914283d8c003deee096,
-        type: 2}
-      propertyPath: moveThisObject
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 631221927}
     - target: {fileID: 114732166683844060, guid: 01b4df8b0dcf0914283d8c003deee096,
         type: 2}
       propertyPath: moveSpeed
-      value: 30
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732166683844060, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: minimumDistance
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
