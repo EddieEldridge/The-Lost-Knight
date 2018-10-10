@@ -34,6 +34,7 @@ public class CollisionDamage : MonoBehaviour {
     void OnTriggerEnter2D()
     {
         health--;
+
         StartCoroutine(Flash());
 
         if(invulnPeriod > 0)

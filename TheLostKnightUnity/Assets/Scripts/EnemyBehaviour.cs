@@ -5,42 +5,78 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour {
 
     // Variables
-    Transform player;
-    public float rotationSpeed = 180f;
- 
+    [SerializeField] public float moveSpeed;
+    [SerializeField] private GameObject pointA;
+    [SerializeField] private GameObject pointB;
+    [SerializeField] private bool reverseMove = false;
+    [SerializeField] private Transform objectToUse;
+    [SerializeField] private bool moveThisObject = false;
+    private float startTime;
+    private float journeyLength;
+    private float distCovered;
+    private float fracJourney;
 
-	// Update is called once per frame
-	void Update ()
+    public Transform player;
+    public int maxDistance;
+    public int minimumDistance;
+
+    void Start()
     {
-        // If the player is null (i.e they are dead)
-        if (player == null)
-        {
-            // Find the players ship
-            GameObject go = GameObject.FindWithTag("PlayerShip");
-            //Debug.Log("Player found");
-            if (go != null)
-            {
-                player = go.transform;
-            }
+        startTime = Time.time;
 
+        if (moveThisObject)
+        {
+            objectToUse = transform;
+        }
+        journeyLength = Vector3.Distance(pointA.transform.position, pointB.transform.position);
+    }
+
+    void Update()
+    {
+        // Move enemy back and forth between two points
+        distCovered = (Time.time - startTime) * moveSpeed;
+        fracJourney = distCovered / journeyLength;
+        if (reverseMove)
+        {
+            objectToUse.position = Vector3.Lerp(pointB.transform.position, pointA.transform.position, fracJourney);
+        }
+        else
+        {
+            objectToUse.position = Vector3.Lerp(pointA.transform.position, pointB.transform.position, fracJourney);
+        }
+        if ((Vector3.Distance(objectToUse.position, pointB.transform.position) == 0.0f || Vector3.Distance(objectToUse.position, pointA.transform.position) == 0.0f)) //Checks if the object has travelled to one of the points
+        {
+            if (reverseMove)
+            {
+                reverseMove = false;
+            }
             else
             {
-                //Debug.Log("Player not found.");
-                return;
+                reverseMove = true;
             }
+            startTime = Time.time;
         }
 
-        Vector3 dir = player.position - transform.position;
-        dir.Normalize();
+         
+        if(player != null)
+        {
+            // If the distance between the enemey and the player is greater than our set minimumDistance
+            if(Vector3.Distance(transform.position, player.position) >= minimumDistance)
+            {
+                // Rotates the transform to face the player
+                transform.LookAt(player);
+                // Move towards the player
+                transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            }
 
-        // Returns the correct angle (in degrees) on the z axis based on our x and y axis.
-        // We don't want to rotate on the x and y axis as it's a 2D game
-        float zAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+            // If the distance between the enemy and the player is less than our maximum distance
+            if (Vector3.Distance(transform.position, player.position) <= maxDistance)
+            {
 
-        Quaternion desiredRotation = Quaternion.Euler(0, 0, zAngle);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
-
-     
+            }
+        }
+        
+        
     }
    
 }

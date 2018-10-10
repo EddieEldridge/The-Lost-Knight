@@ -21,9 +21,7 @@ GameObject:
   - component: {fileID: 4156368427228864}
   - component: {fileID: 212784365622824382}
   - component: {fileID: 114347150864218548}
-  - component: {fileID: 114904267735062822}
   - component: {fileID: 114732166683844060}
-  - component: {fileID: 114039598771430036}
   - component: {fileID: 50405914363807242}
   - component: {fileID: 61416766696207254}
   m_Layer: 9
@@ -40,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576233333379856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.76, y: -9.02, z: 0}
-  m_LocalScale: {x: 0.6012884, y: 0.611364, z: 1}
+  m_LocalPosition: {x: 47.3, y: -5.5, z: 0}
+  m_LocalScale: {x: 2.844094, y: 2.746531, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,7 +76,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.09764123, y: 3.3369021}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -89,23 +87,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.68, y: 2.25}
+  m_Size: {x: 7.2704406, y: 8.923803}
   m_EdgeRadius: 0
---- !u!114 &114039598771430036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1576233333379856}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14153e04bec2aea4f855678d1d4aa044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletOffset: {x: 0, y: -0.5, z: 0}
-  bulletPrefab: {fileID: 1895527894823918, guid: c5f09e76d33614049bdb13a14b653b14,
-    type: 2}
-  fireDelay: 0.5
 --- !u!114 &114347150864218548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,20 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invulnPeriod: 0
-  health: 10
+  health: 227
+  colorToTurn: {r: 0.9811321, g: 0.06016379, b: 0.06016379, a: 0.54509807}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114732166683844060
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1576233333379856}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceccdbfe65edc734591736a7ede4496c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 90
---- !u!114 &114904267735062822
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,15 +112,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1576233333379856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b9790812f0a6234d8a7e577754a71b8, type: 3}
+  m_Script: {fileID: 11500000, guid: ceccdbfe65edc734591736a7ede4496c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 3
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   reverseMove: 0
   objectToUse: {fileID: 4156368427228864}
-  moveThisObject: 1
+  moveThisObject: 0
+  player: {fileID: 0}
+  maxDistance: 10
+  minimumDistance: 5
 --- !u!212 &212784365622824382
 SpriteRenderer:
   m_ObjectHideFlags: 1
