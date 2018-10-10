@@ -360,6 +360,7 @@ MonoBehaviour:
     m_Bits: 512
   attackRange: 2
   damage: 1
+  isAttacking: 0
 --- !u!114 &114899695839619258
 MonoBehaviour:
   m_ObjectHideFlags: 1

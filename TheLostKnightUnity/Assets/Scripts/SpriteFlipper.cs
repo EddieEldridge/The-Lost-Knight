@@ -6,6 +6,13 @@ public class SpriteFlipper : MonoBehaviour
 {
     // variable to hold a reference to our SpriteRenderer component
     private SpriteRenderer mySpriteRenderer;
+    private PlayerMovement playerMovement;
+    
+    
+     void Start()
+    {
+                playerMovement = FindObjectOfType<PlayerMovement>();
+    }
 
     // This function is called just one time by Unity the moment the game loads
     private void Awake()
@@ -20,18 +27,23 @@ public class SpriteFlipper : MonoBehaviour
         // if the variable isn't empty (we have a reference to our SpriteRenderer)
         if (mySpriteRenderer != null)
         {
-            // if the A key was pressed this frame
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                // flip the sprite
-                mySpriteRenderer.flipX = true;
-            }
-
-            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-            {
+           // if the variable isn't empty (we have a reference to our SpriteRenderer)
+        if (mySpriteRenderer != null)
+        {       
+            // Android touch movement
+            if (playerMovement.moveRight==true)
+            {                
                 // flip the sprite
                 mySpriteRenderer.flipX = false;
             }
+            if (playerMovement.moveLeft==true)
+            {
+                // flip the sprite
+                mySpriteRenderer.flipX = true;
+
+            }
+        }
+
         }
     }
 }

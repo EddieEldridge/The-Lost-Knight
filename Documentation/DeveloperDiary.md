@@ -29,3 +29,8 @@ I managed to successfully make a sprite I was happy with along with an extremely
 
 ## 9th October, 2018
 Yesterday we created a player sprite and did a very awful walking animation. Today I would like to separate the player's sword from the model so it can have it's own collider and so it can be more easily animated. I also hope to set this up so that when the player hit's the attack button, their sword will swing and damage the enemy. I already have code for this but with the arrow projectile so hopefully this will be easy enough to implement.
+
+## 10th October, 2018
+Yesterday I successfully managed to implement a melee attack and a corresponding button for melee attacking. I was happy with the way it turned out with an easily adjustable attack radius. I will need to include an animation and some blood effects so it's easier for the player to know if they registered a hit or not. I could also try knocking back the enemy or making them stop their movement to better portray this.
+
+Today I have a short break in which i'd like to get the enemy movement working correctly. In Hattori, the enemies just moved directly down but in The Lost Knight I'm going to have to give them some kind of behaviour.
