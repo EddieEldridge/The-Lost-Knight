@@ -2,7 +2,7 @@
 ![](img\TheLostKnight.png)
 
 <p align="center">
-  <b>This is a development diary for my project, The Lost Knight</b><br>
+  <b>This is a development diary for my Unity project, The Lost Knight. This diary will be used to keep track of development and to outline my thoughts and ideas along the development process.</b><br>
 </p>
 
 
@@ -34,3 +34,6 @@ Yesterday we created a player sprite and did a very awful walking animation. Tod
 Yesterday I successfully managed to implement a melee attack and a corresponding button for melee attacking. I was happy with the way it turned out with an easily adjustable attack radius. I will need to include an animation and some blood effects so it's easier for the player to know if they registered a hit or not. I could also try knocking back the enemy or making them stop their movement to better portray this.
 
 Today I have a short break in which i'd like to get the enemy movement working correctly. In Hattori, the enemies just moved directly down but in The Lost Knight I'm going to have to give them some kind of behaviour.
+
+<b>Update</b>
+I have a new sprite for the player's sword that is larger making it easier to see. This is important as it will be the player's main weapon. I also have made enemies move between two points to simulate some kind of patrol behaviour. The next step for enemy behaviour will be to implement a script that moves the enemy towards the player when the player enters the enemies patrol 'radius'.
