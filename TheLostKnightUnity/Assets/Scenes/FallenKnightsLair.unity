@@ -367,11 +367,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4343614955702402, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.16
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 4343614955702402, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.05
+      value: -4.9
       objectReference: {fileID: 0}
     - target: {fileID: 4343614955702402, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
       propertyPath: m_LocalPosition.z
@@ -659,8 +659,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1076345618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6, y: 19.5, z: 0}
-  m_LocalScale: {x: 3.076118, y: 2.0133374, z: 1}
+  m_LocalPosition: {x: 2.8, y: 9.2, z: 0}
+  m_LocalScale: {x: 2.5155604, y: 2.3583841, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -909,6 +909,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 4.993602
       objectReference: {fileID: 0}
+    - target: {fileID: 114347150864218548, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: health
+      value: 227
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
   m_IsPrefabAsset: 0
@@ -948,7 +953,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: -547}
+  m_AnchoredPosition: {x: -899, y: -357}
   m_SizeDelta: {x: 278.8, y: 212.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1617780840
@@ -1345,15 +1350,15 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.06
+    x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 5
+    height: 3
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 160.43831
   orthographic: 1
-  orthographic size: 20.583988
+  orthographic size: 30.54246
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1376,8 +1381,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2020868134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 3.1, z: -10}
-  m_LocalScale: {x: 179.8875, y: 108.665, z: 5.5}
+  m_LocalPosition: {x: 3.3, y: 5.5, z: -10}
+  m_LocalScale: {x: 182.7, y: 117.9, z: 1.2}
   m_Children:
   - {fileID: 1907594371}
   m_Father: {fileID: 0}

@@ -37,3 +37,6 @@ Today I have a short break in which i'd like to get the enemy movement working c
 
 <b>Update</b>
 I have a new sprite for the player's sword that is larger making it easier to see. This is important as it will be the player's main weapon. I also have made enemies move between two points to simulate some kind of patrol behaviour. The next step for enemy behaviour will be to implement a script that moves the enemy towards the player when the player enters the enemies patrol 'radius'.
+
+<b> Update 2 </b>
+I feel like a lot of my code is a bit of mess so i'm going to go through and refactor/clean up the whole project before I proceed as I feel like this will only cause more problems down the road.
