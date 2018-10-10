@@ -158,6 +158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnPeriod: 0
   health: 1
+  colorToTurn: {r: 0.9811321, g: 0.93948025, b: 0.93948025, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &212572490896670890
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -21,14 +21,12 @@ public class PlayerAttack : MonoBehaviour {
 		{
 			if(isAttacking == true)
 			{
-				Debug.Log("Player attacking");
 				timeBetweenAttack = startTimeBetweenAttack;
 				Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
 				
 				// For loop 
 				for(int i =0; i < enemiesToDamage.Length; i++)
 				{
-					Debug.Log("Damage taken by enemy!");
 					enemiesToDamage[i].GetComponent<CollisionDamage>().takeDamage(damage);
 				}
 			}

@@ -7,6 +7,7 @@ public class EnemyBehaviour : MonoBehaviour {
     // Variables
     Transform player;
     public float rotationSpeed = 180f;
+ 
 
 	// Update is called once per frame
 	void Update ()
@@ -39,5 +40,7 @@ public class EnemyBehaviour : MonoBehaviour {
         Quaternion desiredRotation = Quaternion.Euler(0, 0, zAngle);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
 
+     
     }
+   
 }

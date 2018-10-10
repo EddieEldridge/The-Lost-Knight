@@ -9,6 +9,8 @@ public class CollisionDamage : MonoBehaviour {
     public int health;
     float invulnTimer = 0;
     int correctLayer;
+    public Color colorToTurn;
+    public Color normalColor;
     
     SpriteRenderer spriteRenderer;
 
@@ -32,6 +34,7 @@ public class CollisionDamage : MonoBehaviour {
     void OnTriggerEnter2D()
     {
         health--;
+        StartCoroutine(Flash());
 
         if(invulnPeriod > 0)
         {
@@ -84,5 +87,19 @@ public class CollisionDamage : MonoBehaviour {
     {
         Debug.Log("Damage taken by enemy!");
         health -= damage;
+    }
+    
+    IEnumerator Flash()
+    {
+        int i;
+
+        // Flash
+        for(i=0; i<5; i++)
+        {
+            spriteRenderer.color=colorToTurn;
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.color=normalColor;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }
