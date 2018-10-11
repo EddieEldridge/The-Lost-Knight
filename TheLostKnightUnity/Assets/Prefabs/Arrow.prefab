@@ -21,11 +21,10 @@ GameObject:
   - component: {fileID: 4469340062250494}
   - component: {fileID: 212572490896670890}
   - component: {fileID: 50417489716629984}
-  - component: {fileID: 114995552491809110}
   - component: {fileID: 114010037680195268}
   - component: {fileID: 114896427283974472}
   - component: {fileID: 60797378738346046}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,21 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 3
---- !u!114 &114995552491809110
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1895527894823918}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12c1185032b16f645a37bf5a98cddc04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invulnPeriod: 0
-  health: 1
-  colorToTurn: {r: 0.9811321, g: 0.93948025, b: 0.93948025, a: 1}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &212572490896670890
 SpriteRenderer:
   m_ObjectHideFlags: 1

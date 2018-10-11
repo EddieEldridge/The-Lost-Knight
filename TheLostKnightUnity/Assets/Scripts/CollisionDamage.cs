@@ -5,10 +5,12 @@ using UnityEngine;
 public class CollisionDamage : MonoBehaviour {
 
     // Variables
-    public float invulnPeriod = 0;
+    public int maxHealth=100;
     public int health;
-    float invulnTimer = 0;
+    public int damageDealt;
+
     int correctLayer;
+
     public Color colorToTurn;
     public Color normalColor;
     
@@ -16,6 +18,8 @@ public class CollisionDamage : MonoBehaviour {
 
     void Start()
     {
+        maxHealth = health;
+        
         correctLayer = gameObject.layer;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -34,45 +38,11 @@ public class CollisionDamage : MonoBehaviour {
     void OnTriggerEnter2D()
     {
         health--;
-
-        StartCoroutine(Flash());
-
-        if(invulnPeriod > 0)
-        {
-            invulnTimer = invulnPeriod;
-            gameObject.layer = 10;
-        }
-
+        StartCoroutine(Flash());     
     }
 
     void Update()
     {
-
-        if(invulnTimer > 0)
-        {
-            invulnTimer -= Time.deltaTime;
-
-
-            if(invulnTimer <= 0)
-            {
-                 gameObject.layer = correctLayer;
-
-                 // Displaying invincibility
-                 if(spriteRenderer != null)
-                 {
-                     spriteRenderer.enabled=true;
-                 }
-            }
-
-            else
-            {
-                  if(spriteRenderer != null)
-                 {
-                     spriteRenderer.enabled=!spriteRenderer.enabled;
-                 }
-            }
-        }
-
         if (health <= 0)
         {
             Die();
@@ -84,10 +54,10 @@ public class CollisionDamage : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    public void takeDamage(int damage)
+    public void takeDamage(int damageDealt)
     {
-        Debug.Log("Damage taken by enemy!");
-        health -= damage;
+        health -= damageDealt;
+        Debug.Log("Damage Dealt: " + damageDealt);
     }
     
     IEnumerator Flash()
@@ -98,9 +68,10 @@ public class CollisionDamage : MonoBehaviour {
         for(i=0; i<5; i++)
         {
             spriteRenderer.color=colorToTurn;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             spriteRenderer.color=normalColor;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
+
         }
     }
 }

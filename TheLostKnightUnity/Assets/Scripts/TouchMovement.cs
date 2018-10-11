@@ -5,14 +5,11 @@ public class TouchMovement : MonoBehaviour
 {
     // Variables
     private PlayerMovement player;
-    private Rigidbody2D rigidbody;
-    private PlayerShooting playerShooting;
     private PlayerAttack playerAttacking;
 
      void Start()
     {
                 player = FindObjectOfType<PlayerMovement>();
-                playerShooting = FindObjectOfType<PlayerShooting>();
                 playerAttacking = FindObjectOfType<PlayerAttack>();
     }
 
@@ -50,12 +47,12 @@ public class TouchMovement : MonoBehaviour
 
     public void FireButton()
     {
-        playerShooting.isFiring = true;
+        playerAttacking.isFiring = true;
     }
 
      public void RealeaseFireButton()
     {
-        playerShooting.isFiring = false;
+        playerAttacking.isFiring = false;
     }
 
     public void AttackButton()
