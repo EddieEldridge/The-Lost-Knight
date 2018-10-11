@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour {
 	// Variables
 	Image healthBar;
 	private PlayerHealth playerHealth;
+	private float healthPercentage;
 
 	// Use this for initialization
 	void Start () 
@@ -21,6 +22,7 @@ public class HealthBar : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		healthBar.fillAmount = playerHealth.health / playerHealth.maxHealth;
+		healthPercentage = playerHealth.health / playerHealth.maxHealth;
+		healthBar.fillAmount = healthPercentage;
 	}
 }

@@ -7,7 +7,7 @@ public class CollisionDamage : MonoBehaviour {
     
     // Variables
     int correctLayer;
-    int damageDealt;
+    public int damageDealt;
 
     public Color colorToTurn;
     public Color normalColor;

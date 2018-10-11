@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour {
 
 	// Variables
-    public int maxHealth=100;
-    public int health;
+    public float maxHealth=100;
+    public float health;
 
 	private CollisionDamage collisionDamage;
 
