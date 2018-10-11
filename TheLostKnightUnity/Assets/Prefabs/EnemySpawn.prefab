@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4882539010152744}
   - component: {fileID: 114053827628461950}
   m_Layer: 0
-  m_Name: BasicEnemySpawn
+  m_Name: EnemySpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,5 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 1576233333379856, guid: 01b4df8b0dcf0914283d8c003deee096,
     type: 2}
-  respawnTimer: 3
+  respawnDelay: 0
   spawnDelay: 0

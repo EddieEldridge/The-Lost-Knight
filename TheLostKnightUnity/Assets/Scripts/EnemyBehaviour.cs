@@ -53,24 +53,8 @@ public class EnemyBehaviour : MonoBehaviour {
     {
         if(player != null)
                 {
-                    // If the distance between the enemey and the player is greater than our set minimumDistance
-                    if(Vector2.Distance(transform.position, player.position) >= minimumDistance)
-                    {
-                        // Change the enemies state to chasing instead of patrolling
-                        isPatrolling=false;
-                        isChasing=true;
-
-                        // Rotates the transform to face the player
-                        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-                    }
-
-                    // If the distance between the enemy and the player is less than our maximum distance
-                    /* 
-                    if (Vector3.Distance(transform.position, player.position) <= maxDistance)
-                    {
-
-                    }
-                    */
+                   
+                    
                 }
         
     }
@@ -79,34 +63,7 @@ public class EnemyBehaviour : MonoBehaviour {
     {
         if(isPatrolling==true && isChasing == false)
         {
-            isChasing=false;
-
-            // Move enemy back and forth between two points
-            distCovered = (Time.time - startTime) * moveSpeed;
-            fracJourney = distCovered / journeyLength;
-
-            if (reverseMove)
-            {
-                objectToUse.position = Vector3.Lerp(pointB.transform.position, pointA.transform.position, fracJourney);
-            }
-
-            else
-            {
-                objectToUse.position = Vector3.Lerp(pointA.transform.position, pointB.transform.position, fracJourney);
-            }
-
-            if ((Vector3.Distance(objectToUse.position, pointB.transform.position) == 0.0f || Vector3.Distance(objectToUse.position, pointA.transform.position) == 0.0f)) //Checks if the object has travelled to one of the points
-            {
-                if (reverseMove)
-                {
-                    reverseMove = false;
-                }
-                else
-                {
-                    reverseMove = true;
-                }
-                startTime = Time.time;
-            }
+            
         }
        
     }

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 61416766696207254}
   - component: {fileID: 114385741558197320}
   m_Layer: 9
-  m_Name: BasicEnemy
+  m_Name: EnemyPrefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576233333379856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.7, y: -10.6, z: 0}
+  m_LocalPosition: {x: 16.7, y: -10.3, z: 0}
   m_LocalScale: {x: 1.6531296, y: 1.658218, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +77,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09764123, y: 3.3369021}
+  m_Offset: {x: 0.26849937, y: 0.7991581}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -88,7 +88,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.2704406, y: 8.923803}
+  m_Size: {x: 6.5381594, y: 3.8483162}
   m_EdgeRadius: 0
 --- !u!114 &114347150864218548
 MonoBehaviour:
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c1185032b16f645a37bf5a98cddc04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageDealt: 10
   colorToTurn: {r: 0.9811321, g: 0.06016379, b: 0.06016379, a: 0.54509807}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114385741558197320
@@ -114,8 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c16fe05fe35904bab0e2153b939d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
+  enemyMaxHealth: 300
+  enemyHealth: 50
 --- !u!114 &114732166683844060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,14 +128,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceccdbfe65edc734591736a7ede4496c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
+  moveSpeed: 10
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   reverseMove: 1
   objectToUse: {fileID: 4156368427228864}
   moveThisObject: 1
   player: {fileID: 0}
-  minimumDistance: 10
+  minimumDistance: 3
   isPatrolling: 1
   isChasing: 0
 --- !u!212 &212784365622824382

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 
 	// Variables
-	public Image healthBarImage;
+	Image healthBarImage;
 
     public float playerMaxHealth=100;
     public float playerHealth;
@@ -20,8 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 	{			
 		GameObject healthBarObject = GameObject.FindGameObjectWithTag("HealthBar");
 
-		playerMaxHealth = playerHealth;
-
+		playerHealth = playerMaxHealth;
 		
 		healthBarImage = healthBarObject.GetComponent<Image>();
 		
