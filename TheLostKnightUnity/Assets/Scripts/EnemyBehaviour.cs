@@ -17,13 +17,14 @@ public class EnemyBehaviour : MonoBehaviour {
     private float fracJourney;
 
     public Transform player;
-    public int maxDistance;
+   // public int maxDistance;
     public int minimumDistance;
     public bool isPatrolling=true;
     public bool isChasing=false;
 
     void Start()
     {
+
         startTime = Time.time;
 
         if (moveThisObject)
@@ -41,6 +42,8 @@ public class EnemyBehaviour : MonoBehaviour {
         // If we walk into the enemies range, they will chase us
          if(Vector2.Distance(transform.position, player.position) >= minimumDistance)
          {
+                isPatrolling=false;
+                isChasing=true;
                 EnemyChase();
          }   
         
@@ -62,10 +65,12 @@ public class EnemyBehaviour : MonoBehaviour {
                     }
 
                     // If the distance between the enemy and the player is less than our maximum distance
+                    /* 
                     if (Vector3.Distance(transform.position, player.position) <= maxDistance)
                     {
 
                     }
+                    */
                 }
         
     }

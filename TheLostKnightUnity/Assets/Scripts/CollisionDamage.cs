@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class CollisionDamage : MonoBehaviour {
 
+    
     // Variables
-    public int maxHealth=100;
-    public int health;
-    public int damageDealt;
-
     int correctLayer;
+    int damageDealt;
 
     public Color colorToTurn;
     public Color normalColor;
     
     SpriteRenderer spriteRenderer;
+    private PlayerHealth playerHealth;
+    private EnemyHealth enemyHealth;
+
 
     void Start()
     {
-        maxHealth = health;
-        
+        playerHealth = FindObjectOfType<PlayerHealth>();
+        enemyHealth = FindObjectOfType<EnemyHealth>();
+
         correctLayer = gameObject.layer;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -35,29 +37,25 @@ public class CollisionDamage : MonoBehaviour {
         }
         
     }
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        health--;
-        StartCoroutine(Flash());     
+        if(other.CompareTag("Enemy"))
+        {
+            playerHealth.health -= damageDealt;
+            Debug.Log("Damage Dealt: " + damageDealt);
+            StartCoroutine(Flash());   
+        }       
     }
 
     void Update()
     {
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
+      
     }
 
     public void takeDamage(int damageDealt)
     {
-        health -= damageDealt;
-        Debug.Log("Damage Dealt: " + damageDealt);
+       enemyHealth.health-=damageDealt;
+       StartCoroutine(Flash());   
     }
     
     IEnumerator Flash()

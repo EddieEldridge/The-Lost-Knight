@@ -8,19 +8,19 @@ public class HealthBar : MonoBehaviour {
 
 	// Variables
 	Image healthBar;
-	private CollisionDamage damageDetection;
+	private PlayerHealth playerHealth;
 
 	// Use this for initialization
 	void Start () 
 	{
 		healthBar = GetComponent<Image>();	
-		damageDetection = FindObjectOfType<CollisionDamage>();
-		damageDetection.maxHealth = damageDetection.health;
+		playerHealth = FindObjectOfType<PlayerHealth>();
+		playerHealth.maxHealth = playerHealth.health;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		healthBar.fillAmount = damageDetection.health / damageDetection.maxHealth;
+		healthBar.fillAmount = playerHealth.health / playerHealth.maxHealth;
 	}
 }
