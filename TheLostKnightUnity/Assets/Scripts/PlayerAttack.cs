@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour {
         // Shooting script
 		if(isFiring ==true && cooldownTimer <=0)
         {
-            Debug.Log("Player Shooting!");
+           // Debug.Log("Player Shooting!");
 
             // Set delay in between shots
             cooldownTimer = fireDelay;

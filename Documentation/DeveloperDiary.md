@@ -40,3 +40,6 @@ I have a new sprite for the player's sword that is larger making it easier to se
 
 <b> Update 2 </b>
 I feel like a lot of my code is a bit of mess so i'm going to go through and refactor/clean up the whole project before I proceed as I feel like this will only cause more problems down the road.
+
+## 11th October, 2018
+Today I successfully managed to refactor a lot of the code so that going forward my project and scripts are laid out in a more structured way. This will make it easier to add new components to the game without spending hours implementing them. I've also added a health bar system so for testing I can more acccurately see what's going.

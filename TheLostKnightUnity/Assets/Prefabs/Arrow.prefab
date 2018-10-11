@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4469340062250494}
   - component: {fileID: 212572490896670890}
   - component: {fileID: 50417489716629984}
+  - component: {fileID: 60797378738346046}
   - component: {fileID: 114010037680195268}
   - component: {fileID: 114896427283974472}
-  - component: {fileID: 60797378738346046}
   - component: {fileID: 114895962799477792}
   m_Layer: 0
   m_Name: Arrow

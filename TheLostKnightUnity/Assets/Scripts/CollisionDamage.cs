@@ -37,13 +37,21 @@ public class CollisionDamage : MonoBehaviour {
         }
         
     }
-    void OnTriggerEnter2D(Collider2D other)
+
+    void OnTriggerEnter2D(Collider2D collidingWith)
     {
-        if(other.CompareTag("Enemy"))
+        if(collidingWith.CompareTag("Enemy"))
         {
+            StartCoroutine(Flash());   
             enemyHealth.enemyHealth -= damageDealt;
             Debug.Log("Damage Dealt to Enemy: " + damageDealt);
+        }
+
+        if(collidingWith.CompareTag("Player"))
+        {
             StartCoroutine(Flash());   
+            playerHealth.playerHealth -= damageDealt;
+            Debug.Log("Damage Dealt to Player: " + damageDealt);
         }  
     }
 

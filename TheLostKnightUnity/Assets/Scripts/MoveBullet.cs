@@ -8,7 +8,8 @@ public class MoveBullet : MonoBehaviour {
  public float maxSpeed = 5f;
 
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		Vector3 pos = transform.position;
 		
 		Vector3 velocity = new Vector3(1, maxSpeed * Time.deltaTime, 0);
@@ -16,5 +17,5 @@ public class MoveBullet : MonoBehaviour {
 		pos += transform.rotation * velocity;
 
 		transform.position = pos;
-}
+	}
 }
