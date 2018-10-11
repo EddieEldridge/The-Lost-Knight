@@ -5,22 +5,22 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour {
 
 	// Variables
-    public int maxHealth=100;
-    public int health;
+    public int enemyMaxHealth=100;
+    public int enemyHealth;
 
 	private CollisionDamage collisionDamage;
 
 	// Use this for initialization
 	void Start () 
 	{	
-		maxHealth = health;
+		enemyMaxHealth = enemyHealth;
 		collisionDamage = FindObjectOfType<CollisionDamage>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (health <= 0)
+		if (enemyHealth <= 0)
         {
             Die();
         }

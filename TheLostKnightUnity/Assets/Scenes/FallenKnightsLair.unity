@@ -352,7 +352,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 131223774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.7, y: -8.5, z: 0}
+  m_LocalPosition: {x: -39.1, y: -9.4, z: 0}
   m_LocalScale: {x: 7.900166, y: 4.6658015, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -401,6 +401,26 @@ Prefab:
         type: 2}
       propertyPath: damageDealt
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114320146509204788, guid: 9142951a43a2f044ca71747c0d46a546,
+        type: 2}
+      propertyPath: playerHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114320146509204788, guid: 9142951a43a2f044ca71747c0d46a546,
+        type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1343697560}
+    - target: {fileID: 114320146509204788, guid: 9142951a43a2f044ca71747c0d46a546,
+        type: 2}
+      propertyPath: healthBarImage
+      value: 
+      objectReference: {fileID: 1343697560}
+    - target: {fileID: 114254105578950700, guid: 9142951a43a2f044ca71747c0d46a546,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9142951a43a2f044ca71747c0d46a546, type: 2}
@@ -590,7 +610,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 871903537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64.9, y: -7.4, z: 0}
+  m_LocalPosition: {x: -5.5, y: -9.9, z: 0}
   m_LocalScale: {x: 7.900166, y: 4.6658015, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -751,10 +771,9 @@ GameObject:
   - component: {fileID: 1343697559}
   - component: {fileID: 1343697561}
   - component: {fileID: 1343697560}
-  - component: {fileID: 1343697562}
   m_Layer: 5
   m_Name: HealthBar
-  m_TagString: Untagged
+  m_TagString: HealthBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -811,17 +830,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1343697558}
   m_CullTransparentMesh: 0
---- !u!114 &1343697562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1343697558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f25ea7e99c9f3d446bee60739ce57b8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1351185892
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,11 +956,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4156368427228864, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 49.7
+      value: -19.8
       objectReference: {fileID: 0}
     - target: {fileID: 4156368427228864, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10.6
+      value: -10.8
       objectReference: {fileID: 0}
     - target: {fileID: 4156368427228864, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1002,6 +1010,31 @@ Prefab:
         type: 2}
       propertyPath: moveSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385741558197320, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: enemyHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 61416766696207254, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.26849937
+      objectReference: {fileID: 0}
+    - target: {fileID: 61416766696207254, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 6.5381594
+      objectReference: {fileID: 0}
+    - target: {fileID: 61416766696207254, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.7991581
+      objectReference: {fileID: 0}
+    - target: {fileID: 61416766696207254, guid: 01b4df8b0dcf0914283d8c003deee096,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 3.8483162
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}

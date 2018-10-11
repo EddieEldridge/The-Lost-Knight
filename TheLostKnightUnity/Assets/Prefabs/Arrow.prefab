@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114010037680195268}
   - component: {fileID: 114896427283974472}
   - component: {fileID: 60797378738346046}
+  - component: {fileID: 114895962799477792}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -132,6 +133,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
+--- !u!114 &114895962799477792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1895527894823918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c1185032b16f645a37bf5a98cddc04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDealt: 10
+  colorToTurn: {r: 1, g: 1, b: 1, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114896427283974472
 MonoBehaviour:
   m_ObjectHideFlags: 1

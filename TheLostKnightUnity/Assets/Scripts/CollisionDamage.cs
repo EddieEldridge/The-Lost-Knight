@@ -41,10 +41,10 @@ public class CollisionDamage : MonoBehaviour {
     {
         if(other.CompareTag("Enemy"))
         {
-            playerHealth.health -= damageDealt;
-            Debug.Log("Damage Dealt: " + damageDealt);
+            enemyHealth.enemyHealth -= damageDealt;
+            Debug.Log("Damage Dealt to Enemy: " + damageDealt);
             StartCoroutine(Flash());   
-        }       
+        }  
     }
 
     void Update()
@@ -54,7 +54,7 @@ public class CollisionDamage : MonoBehaviour {
 
     public void takeDamage(int damageDealt)
     {
-       enemyHealth.health-=damageDealt;
+       enemyHealth.enemyHealth-=damageDealt;
        StartCoroutine(Flash());   
     }
     

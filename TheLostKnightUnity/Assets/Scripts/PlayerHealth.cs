@@ -1,26 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerHealth : MonoBehaviour {
 
 	// Variables
-    public float maxHealth=100;
-    public float health;
+	public Image healthBarImage;
+
+    public float playerMaxHealth=100;
+    public float playerHealth;
+	float healthPercentage;
 
 	private CollisionDamage collisionDamage;
 
 	// Use this for initialization
 	void Start () 
-	{	
-		maxHealth = health;
+	{			
+		GameObject healthBarObject = GameObject.FindGameObjectWithTag("HealthBar");
+
+		playerMaxHealth = playerHealth;
+
+		
+		healthBarImage = healthBarObject.GetComponent<Image>();
+		
+
 		collisionDamage = FindObjectOfType<CollisionDamage>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (health <= 0)
+		healthPercentage = playerHealth / playerMaxHealth;
+		healthBarImage.fillAmount = healthPercentage;
+
+		if (playerHealth <= 0)
         {
             Die();
         }
