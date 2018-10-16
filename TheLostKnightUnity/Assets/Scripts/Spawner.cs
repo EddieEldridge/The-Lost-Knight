@@ -8,8 +8,8 @@ public class Spawner : MonoBehaviour {
 	public GameObject prefabToSpawn;
 	
 	GameObject objectInstance;
-	public float respawnDelay;
 	public float spawnDelay;
+	public bool canRespawn;
 	float timer;
 
 	// Use this for initialization
@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour {
 
 		if(objectInstance == null)
 		{
-			if(timer >= spawnDelay)
+			if(timer >= spawnDelay && canRespawn==true)
 			{
 				Spawn();
 			}
@@ -36,4 +36,5 @@ public class Spawner : MonoBehaviour {
 	{		
 			objectInstance = (GameObject)Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
 	}
+	
 }

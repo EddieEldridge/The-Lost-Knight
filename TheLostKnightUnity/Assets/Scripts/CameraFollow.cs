@@ -2,18 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour {
+public class CameraFollow : MonoBehaviour
+{
+    // Variables
+    private Vector3 offset;
+    private GameObject player;
 
-    public Transform target;
+    void Start()
+    {
+        offset = transform.position;
+    }
 
-    public float smoothSpeed = 15;
-
-    // Function to move our camera with our target 
     void LateUpdate()
     {
-        if(target!=null)
+        if (player == null)
         {
-            transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, target.position.y+3, transform.position.z), Time.deltaTime*smoothSpeed);
+            player = GameObject.Find("PlayerPrefab(Clone)");
+        }
+        else
+        {
+            transform.position = player.transform.position + offset;
         }
     }
 }
+

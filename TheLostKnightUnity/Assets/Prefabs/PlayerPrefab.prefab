@@ -93,7 +93,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1330321111541362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -101.8, y: 54.1, z: 0}
+  m_LocalPosition: {x: 13.48, y: -9.53, z: 0}
   m_LocalScale: {x: 3.252193, y: 3.1401482, z: 1}
   m_Children:
   - {fileID: 4876742085254088}
@@ -388,17 +388,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62f801c13fb14c4f8a1ae150026dfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBetweenAttack: 0
+  timeBetweenAttack: 0
+  startTimeBetweenAttack: 1
   attackPosition: {fileID: 4974751873083158}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 512
   attackRange: 1.28
-  damage: 1
+  damage: 10
   isAttacking: 0
   arrowPrefab: {fileID: 1895527894823918, guid: c5f09e76d33614049bdb13a14b653b14,
     type: 2}
-  fireDelay: 0.1
+  fireDelay: 1
   isFiring: 0
 --- !u!114 &114899695839619258
 MonoBehaviour:
@@ -426,7 +427,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ff7aeb0aa9822fb4aa292106f03ec3a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageDealt: 10
-  colorToTurn: {r: 0.9811321, g: 0.06016379, b: 0.06016379, a: 0.54509807}
+  colorToTurn: {r: 0.9811321, g: 0.06016379, b: 0.06016379, a: 0.79607844}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114385741558197320
 MonoBehaviour:
@@ -129,8 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  pointA: {fileID: 0}
-  pointB: {fileID: 0}
   reverseMove: 1
   objectToUse: {fileID: 4156368427228864}
   moveThisObject: 1
