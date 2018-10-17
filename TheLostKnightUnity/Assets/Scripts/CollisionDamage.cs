@@ -17,12 +17,15 @@ public class CollisionDamage : MonoBehaviour {
     SpriteRenderer spriteRenderer;
     private PlayerHealth playerHealth;
     private EnemyHealth enemyHealth;
+    private CameraShake cameraShake;
 
+    public GameObject bloodFX;
 
     void Start()
     {
         playerHealth = FindObjectOfType<PlayerHealth>();
         enemyHealth = FindObjectOfType<EnemyHealth>();
+        cameraShake = FindObjectOfType<CameraShake>();
 
         correctLayer = gameObject.layer;
 
@@ -64,6 +67,8 @@ public class CollisionDamage : MonoBehaviour {
 
     public void takeDamage(int damageDealt)
     {
+       cameraShake.shakeCamera();
+       Instantiate(bloodFX, transform.position, Quaternion.identity);
        enemyHealth.enemyHealth-=damageDealt;
        StartCoroutine(Flash());   
     }
