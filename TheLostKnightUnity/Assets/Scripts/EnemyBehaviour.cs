@@ -9,34 +9,43 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] public float moveSpeed;
     private float waitTime;
     public float startWaitTime;
-    public Transform player;
     public Transform[] moveSpots;
     private int randomSpot;
-    
+    private Transform playerTransform;
+    public float aggroRange;
 
 
 
-    public bool isPatrolling = true;
-    public bool isChasing = false;
+
+    public bool isPatrolling;
+    public bool isChasing;
 
     void Start()
     {
-        waitTime=startWaitTime;
+        waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        isPatrolling = true;
+        isChasing = false;
     }
 
     void Update()
     {
         // By default the enemies should just patrol the area
         EnemyPatrol();
+        if (Vector2.Distance(transform.position, playerTransform.position) < aggroRange)
+        {
+            EnemyChase();
+        }
     }
+
 
     void EnemyChase()
     {
-        if (player != null)
+        if (playerTransform != null)
         {
-
-
+            isChasing = true;
+            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
         }
     }
 
@@ -44,18 +53,18 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (isPatrolling == true && isChasing == false)
         {
-            transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, moveSpeed*Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, moveSpeed * Time.deltaTime);
 
-            if(Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
+            if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
             {
-                if(waitTime<=0)
+                if (waitTime <= 0)
                 {
                     randomSpot = Random.Range(0, moveSpots.Length);
-                    waitTime=startWaitTime;
+                    waitTime = startWaitTime;
                 }
                 else
                 {
-                    waitTime-=Time.deltaTime;
+                    waitTime -= Time.deltaTime;
                 }
             }
         }

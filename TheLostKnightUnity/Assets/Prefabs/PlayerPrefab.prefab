@@ -285,7 +285,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 2.25}
+    oldSize: {x: 0.86, y: 1.83}
     newSize: {x: 2.25, y: 2.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -351,6 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageDealt: 5
+  timer: 0
   colorToTurn: {r: 0.85882354, g: 0, b: 0, a: 0.5803922}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114320146509204788
@@ -388,7 +389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62f801c13fb14c4f8a1ae150026dfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttack: 0
   startTimeBetweenAttack: 1
   attackPosition: {fileID: 4974751873083158}
   whatIsEnemies:
@@ -447,7 +447,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d00e87ec8e35a0c47bddea675e7a9b77, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f99bc4c42d397c843bb329c782f5d08b, type: 3}
   m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
   m_FlipX: 0
   m_FlipY: 0
