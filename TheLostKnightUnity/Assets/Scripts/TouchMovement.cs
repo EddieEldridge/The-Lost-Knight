@@ -59,5 +59,10 @@ public class TouchMovement : MonoBehaviour
     {
         playerAttacking.isAttacking=true;
     }
+    
+    public void ReleaseAttackButton()
+    {
+        playerAttacking.isAttacking=false;
+    }
 
 }

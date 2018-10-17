@@ -8,6 +8,8 @@ public class CollisionDamage : MonoBehaviour {
     // Variables
     int correctLayer;
     public int damageDealt;
+    float invincibilityTime; 
+    public float timer;
 
     public Color colorToTurn;
     public Color normalColor;
@@ -79,5 +81,9 @@ public class CollisionDamage : MonoBehaviour {
             yield return new WaitForSeconds(0.05f);
 
         }
+    }
+
+    void Timer()
+    {
     }
 }

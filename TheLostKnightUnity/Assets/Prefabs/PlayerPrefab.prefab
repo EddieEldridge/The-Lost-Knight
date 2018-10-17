@@ -37,12 +37,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4343614955702402}
+  - component: {fileID: 61016709131053652}
   - component: {fileID: 50302182138244098}
   - component: {fileID: 212516299155112210}
+  - component: {fileID: 95242072115604004}
   - component: {fileID: 114254105578950700}
   - component: {fileID: 114292162598893050}
-  - component: {fileID: 61016709131053652}
-  - component: {fileID: 95242072115604004}
   - component: {fileID: 114899695839619258}
   - component: {fileID: 114870104860288268}
   - component: {fileID: 114320146509204788}
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c1185032b16f645a37bf5a98cddc04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDealt: 20
+  damageDealt: 5
   colorToTurn: {r: 0.85882354, g: 0, b: 0, a: 0.5803922}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114320146509204788

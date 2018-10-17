@@ -6,14 +6,14 @@ public class PlayerAttack : MonoBehaviour
 {
 
     // Variables
-    public float timeBetweenAttack;
+    float timeBetweenAttack;
     public float startTimeBetweenAttack;
 
     public Transform attackPosition;
     public LayerMask whatIsEnemies;
     public float attackRange;
     public int damage;
-    public bool isAttacking = false;
+    public bool isAttacking;
 
     // Shooting Variables
     public GameObject arrowPrefab;
@@ -49,7 +49,7 @@ public class PlayerAttack : MonoBehaviour
         // Melee attacking script
         if (timeBetweenAttack <= 0)
         {
-            if (isAttacking == false)
+            if (isAttacking == true)
             {
                 timeBetweenAttack = startTimeBetweenAttack;
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
@@ -60,7 +60,9 @@ public class PlayerAttack : MonoBehaviour
                     enemiesToDamage[i].GetComponent<CollisionDamage>().takeDamage(damage);
                     Debug.Log("Damage dealt to player: " + damage);
                 }
+                timeBetweenAttack = startTimeBetweenAttack;
             }
+
         }
 
         else
