@@ -2,24 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionDamage : MonoBehaviour {
+public class CollisionDamage : MonoBehaviour
+{
 
-    
+
     // Variables
     int correctLayer;
     public int damageDealt;
-    float invincibilityTime; 
+    float invincibilityTime;
     public float timer;
 
     public Color colorToTurn;
     public Color normalColor;
-    
+
     SpriteRenderer spriteRenderer;
     private PlayerHealth playerHealth;
     private EnemyHealth enemyHealth;
     private CameraShake cameraShake;
 
-    public GameObject bloodFX;
+    private ParticleSystem particleSystem;
+
+    void Awake()
+    {
+        particleSystem = GetComponent<ParticleSystem>();
+    }
 
     void Start()
     {
@@ -31,64 +37,62 @@ public class CollisionDamage : MonoBehaviour {
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        if(spriteRenderer == null)
+        if (spriteRenderer == null)
         {
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-            if(spriteRenderer == null)
+            if (spriteRenderer == null)
             {
-                 Debug.Log("Error: No sprite found.");
+                Debug.Log("Error: No sprite found.");
             }
         }
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D collidingWith)
     {
-        if(collidingWith.CompareTag("Enemy"))
+        if (collidingWith.CompareTag("Enemy"))
         {
-            StartCoroutine(Flash());   
+            StartCoroutine(Flash());
             enemyHealth.enemyHealth -= damageDealt;
             Debug.Log("Damage Dealt to Enemy: " + damageDealt);
         }
 
-        if(collidingWith.CompareTag("Player"))
+        if (collidingWith.CompareTag("Player"))
         {
-            StartCoroutine(Flash());   
+            StartCoroutine(Flash());
             playerHealth.playerHealth -= damageDealt;
             Debug.Log("Damage Dealt to Player: " + damageDealt);
-        }  
+        }
     }
 
     void Update()
     {
-      
+
     }
 
     public void takeDamage(int damageDealt)
     {
-       cameraShake.shakeCamera();
-       Instantiate(bloodFX, transform.position, Quaternion.identity);
-       enemyHealth.enemyHealth-=damageDealt;
-       StartCoroutine(Flash());   
+        particleSystem.Play();
+        cameraShake.shakeCamera();
+        enemyHealth.enemyHealth -= damageDealt;
+        StartCoroutine(Flash());
     }
-    
+
     IEnumerator Flash()
     {
         int i;
 
         // Flash
-        for(i=0; i<5; i++)
+        for (i = 0; i < 5; i++)
         {
-            spriteRenderer.color=colorToTurn;
+            spriteRenderer.color = colorToTurn;
             yield return new WaitForSeconds(0.05f);
-            spriteRenderer.color=normalColor;
+            spriteRenderer.color = normalColor;
             yield return new WaitForSeconds(0.05f);
 
         }
     }
 
-    void Timer()
-    {
-    }
+
 }
