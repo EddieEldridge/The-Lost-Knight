@@ -49,3 +49,6 @@ I added some lighting effects and re-wrote some of the code. I still need to add
 
 ## 17th October, 2018
 Now that i've added patrolling and chasing behaviour to the enemies it's time to work on animating the player and adding some particle effects to make the player's attack's feel more impactful. I would like to do this as this was a specific feature that was specified in the design document. To do this, I would like to add a blood particle effect that happens when the enemy is hit as well as knocking the enemy back a small bit when they are hit. This should let the player know when they have connected with their attack. I would also like to add an exclamation mark above enemies heads when the player comes within their aggro range. This should let the player know that the enemies have seen them and are going to attack them.
+
+## 22 October, 2018
+I've sucessfully added a game background for the tutorial level which I can use as a template for all other levels. I also have a blood animation/particle effect that plays when an enemy is hit. The next plan is to work on a pause menu that will display player's information such as their XP level, health and give them options for exiting the game and settings.
