@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour {
     public bool moveLeft;
     public bool jump;
     public float jumpForce;
+    public float lowJumpMultiplier = 2.5f;
+    public float fallMultiplier = 2f;
     bool isGrounded;
 
     // variable to hold a reference to our SpriteRenderer component
@@ -75,7 +77,7 @@ public class PlayerMovement : MonoBehaviour {
 
             if (jump==true && isGrounded==true)
             {
-                playerRB.AddForce((Vector2.up) * jumpForce); 
+                playerRB.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier -1) * Time.deltaTime;
             }
         }
 

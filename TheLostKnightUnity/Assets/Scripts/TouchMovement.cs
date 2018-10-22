@@ -15,6 +15,7 @@ public class TouchMovement : MonoBehaviour
                 pauseMenu = FindObjectOfType<PauseMenu>();
     }
 
+    // Button touch events
     public void LeftArrow()
     {
         player.moveRight = false;

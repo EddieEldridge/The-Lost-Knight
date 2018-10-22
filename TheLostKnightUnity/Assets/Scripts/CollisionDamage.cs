@@ -64,6 +64,8 @@ public class CollisionDamage : MonoBehaviour
             playerHealth.playerHealth -= damageDealt;
             Debug.Log("Damage Dealt to Player: " + damageDealt);
         }
+
+        
     }
 
     void Update()
