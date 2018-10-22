@@ -5,12 +5,11 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     // Variables
-    private Vector3 offset;
+    public Vector3 offset;
     private GameObject player;
 
     void Start()
     {
-        offset = transform.position;
     }
 
     void LateUpdate()
