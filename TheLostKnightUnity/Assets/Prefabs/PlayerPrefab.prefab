@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4343614955702402}
   - component: {fileID: 50302182138244098}
   - component: {fileID: 212516299155112210}
-  - component: {fileID: 95242072115604004}
   - component: {fileID: 114254105578950700}
   - component: {fileID: 114292162598893050}
   - component: {fileID: 114899695839619258}
@@ -88,10 +87,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 5
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 50
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -160,24 +159,6 @@ PolygonCollider2D:
       - {x: -0.125, y: -0.895}
       - {x: 0.015, y: -0.72499996}
       - {x: 0.085, y: -0.66499996}
---- !u!95 &95242072115604004
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1330321111541362}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e08ab69b3e85344b96d265830ebd92f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114254105578950700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,9 +174,10 @@ MonoBehaviour:
   moveRight: 0
   moveLeft: 0
   jump: 0
-  jumpForce: 200
-  lowJumpMultiplier: 2.5
-  fallMultiplier: 2
+  jumpForce: 5000
+  lowJumpMultiplier: 5
+  fallMultiplier: 20
+  isGrounded: 1
 --- !u!114 &114292162598893050
 MonoBehaviour:
   m_ObjectHideFlags: 1

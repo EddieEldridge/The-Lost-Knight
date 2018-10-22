@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpForce;
     public float lowJumpMultiplier = 2.5f;
     public float fallMultiplier = 2f;
-    bool isGrounded;
+    public bool isGrounded;
 
     // variable to hold a reference to our SpriteRenderer component
     private SpriteRenderer mySpriteRenderer;
@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour {
             isGrounded = false;
         }
     }
+
     void Start ()
     {   
         // Assign our Player's rigidybody to 'rigidbody'
@@ -51,6 +52,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void Update()
     {
+         Debug.Log(playerRB.velocity);
 
         // Assign players postion to a Vector3 named pos
         Vector3 pos = transform.position;
@@ -77,7 +79,8 @@ public class PlayerMovement : MonoBehaviour {
 
             if (jump==true && isGrounded==true)
             {
-                playerRB.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier -1) * Time.deltaTime;
+                Debug.Log("Im in");
+                playerRB.AddForce((Vector2.up) * jumpForce *((fallMultiplier -1) * Time.deltaTime)); 
             }
         }
 
