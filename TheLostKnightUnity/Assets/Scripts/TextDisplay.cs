@@ -4,20 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class TextDisplay : MonoBehaviour {
+public class TextDisplay : MonoBehaviour
+{
 
-	// Variables
-	public float coinAmount;
-	public Text coinText;
-	private ItemCount itemCount;
+    // Variables
+    public float coinAmount;
+    public Text coinText;
 
-	  void Start()
+    // Update is called once per frame
+    void Update()
     {
-         itemCount = FindObjectOfType<ItemCount>();
-	}
-	// Update is called once per frame
-	void Update () 
-	{
-		coinText.text = "Coins: " + coinAmount;
-	}
+        coinText.text = "Coins: " + coinAmount;
+    }
 }

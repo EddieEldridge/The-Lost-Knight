@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemCount : MonoBehaviour {
+public class ItemCount : MonoBehaviour
+{
 
-	private TextDisplay textDisplay;
+    private TextDisplay textDisplay;
 
-	  void Start()
+    void Start()
     {
-         textDisplay = FindObjectOfType<TextDisplay>();
-	}
+        textDisplay = FindObjectOfType<TextDisplay>();
+    }
 
-	void OnTriggerEnter2D(Collider2D collidingWith)
+    void OnTriggerEnter2D(Collider2D collidingWith)
     {
-		if (collidingWith.CompareTag("Player"))
+        if (collidingWith.CompareTag("Player"))
         {
-			textDisplay.coinAmount++;
-			Destroy(gameObject);
+            textDisplay.coinAmount++;
+            Destroy(gameObject);
         }
-	}
+    }
 }
