@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SettingsMenu : MonoBehaviour {
+public class SettingsMenu : MonoBehaviour
+{
 
-	// Use this for initialization
-	public void SetVolume()
-	{
-		
-	}
+    // Use this for initialization
+    public void SetVolume()
+    {
+
+    }
 }

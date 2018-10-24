@@ -7,7 +7,8 @@ public class TouchMovement : MonoBehaviour
     private PlayerMovement player;
     private PlayerAttack playerAttacking;
     private PauseMenu pauseMenu;
-    public int touchCount = 0;
+    public int rightTouchCount = 0;
+    public int leftTouchCount = 0;
 
     private bool keepGoing =true;
     public float timer;
@@ -23,25 +24,32 @@ public class TouchMovement : MonoBehaviour
     {
         timer+=Time.deltaTime;
 
-        if(timer>1f)
+        if(timer>0.75f)
         {
-          touchCount = 0;
+          leftTouchCount = 0;
+          rightTouchCount=0;
           timer=0f;
         }
     }
+
+    
     // Button touch events
     public void LeftArrow()
     {
-        player.moveRight = false;
+        if(player != null)
+    {
+player.moveRight = false;
         player.moveLeft = true;
-        touchCount++;
+        leftTouchCount++;
+    }
+        
     }
 
     public void RightArrow()
     {
         player.moveRight = true;
         player.moveLeft = false;
-        touchCount++;
+        rightTouchCount++;
     }
 
     public void ReleaseLeftArrow()

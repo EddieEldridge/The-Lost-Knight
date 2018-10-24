@@ -39,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895527894823918}
   m_LocalRotation: {x: -0, y: -0, z: -0.71281815, w: 0.701349}
-  m_LocalPosition: {x: -0.69, y: 10.23, z: 0}
-  m_LocalScale: {x: 0.2953125, y: 0.27171874, z: 1}
+  m_LocalPosition: {x: 6.025, y: 14.451, z: 0}
+  m_LocalScale: {x: 0.7111125, y: 0.93172354, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageDealt: 10
+  timer: 0
   colorToTurn: {r: 1, g: 1, b: 1, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114896427283974472

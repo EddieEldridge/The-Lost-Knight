@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public float dashSpeed;
     public float dashTime;
     public float startDashTime;
-    public int direction;
+    public int direction = 0;
 
 
 
@@ -70,16 +70,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         // Assign players postion to a Vector3 named pos
         Vector3 pos = transform.position;
 
         // if the variable isn't empty (we have a reference to our SpriteRenderer)
         if (mySpriteRenderer != null)
         {
-            // Dashing
-            if (direction == 0)
+
+            if (direction == 0 || direction == 1 || direction == 2)
             {
-                // Android touch movement
 
                 // Moving left
                 if (moveLeft == true)
@@ -88,7 +88,6 @@ public class PlayerMovement : MonoBehaviour
                     playerRB.velocity = new Vector2(-moveSpeed, playerRB.velocity.y);
                     // flip the sprite
                     mySpriteRenderer.flipX = true;
-
                 }
 
                 // Moving right
@@ -100,17 +99,15 @@ public class PlayerMovement : MonoBehaviour
                     mySpriteRenderer.flipX = false;
                 }
 
-
-
                 // Jumping
-                if (jump == true && isGrounded == true)
+                else if (jump == true && isGrounded == true)
                 {
-                    direction = 3;
                     playerRB.AddForce((Vector2.up) * jumpForce * ((fallMultiplier - 1) * Time.deltaTime));
                 }
-            }
-            else
-            {
+
+
+                // Dashing
+                // Android touch movement
                 if (dashTime <= 0)
                 {
                     direction = 0;
@@ -121,31 +118,43 @@ public class PlayerMovement : MonoBehaviour
                 {
                     dashTime -= Time.deltaTime;
 
-                    if (direction == 1 && touchMovement.touchCount >= 2)
+                    if (direction == 1 && touchMovement.leftTouchCount >= 2)
                     {
                         myParticleSystem.Play();
                         playerRB.velocity = Vector2.left * dashSpeed;
                     }
-                    else if (direction == 2 && touchMovement.touchCount >= 2)
+
+                    // Android touch movement
+                    if (direction == 2 && touchMovement.rightTouchCount >= 2)
                     {
                         myParticleSystem.Play();
                         playerRB.velocity = Vector2.right * dashSpeed;
                     }
+
                 }
+
+
+
+
+
+
             }
+
+
 
 
 
         }
 
-        
 
-        // Restricts the player to camera view
-        /*    pos = Camera.main.WorldToViewportPoint(transform.position);
-           pos.x = Mathf.Clamp01(pos.x);
-           pos.y = Mathf.Clamp01(pos.y);
-           transform.position = Camera.main.ViewportToWorldPoint(pos); */
+
     }
 
-    
+    // Restricts the player to camera view
+    /*    pos = Camera.main.WorldToViewportPoint(transform.position);
+       pos.x = Mathf.Clamp01(pos.x);
+       pos.y = Mathf.Clamp01(pos.y);
+       transform.position = Camera.main.ViewportToWorldPoint(pos); */
 }
+
+

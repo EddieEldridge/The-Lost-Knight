@@ -174,16 +174,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveRight: 0
   moveLeft: 0
-  jump: 0
-  moveSpeed: 200
+  jump: 1
+  moveSpeed: 50
   jumpForce: 5000
   lowJumpMultiplier: 5
   fallMultiplier: 20
   isGrounded: 1
   dashSpeed: 300
   dashTime: 0
-  startDashTime: 0.2
-  direction: 0
+  startDashTime: 0.5
+  direction: 2
 --- !u!114 &114292162598893050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -432,7 +432,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+      maxColor: {r: 0.9339623, g: 0.876691, b: 0.876691, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -875,9 +875,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0.92, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.56, y: 1, z: 1}
+    m_Position: {x: -1.33, y: -0.18, z: 0}
+    m_Rotation: {x: -0.25, y: 0, z: 0}
+    m_Scale: {x: 2.18, y: 0.37, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -888,7 +888,7 @@ ParticleSystem:
     m_SpriteRenderer: {fileID: 0}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
-    alignToDirection: 0
+    alignToDirection: 1
     m_Texture: {fileID: 0}
     m_TextureClipChannel: 3
     m_TextureClipThreshold: 0
@@ -3471,7 +3471,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    range: {x: 0, y: 1}
+    range: {x: 1, y: 0}
     separateAxes: 0
   RotationBySpeedModule:
     enabled: 0
@@ -4095,7 +4095,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.1981132, g: 0.038314342, b: 0.038314342, a: 1}
+      maxColor: {r: 0.047169805, g: 0.042497326, b: 0.042497326, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
