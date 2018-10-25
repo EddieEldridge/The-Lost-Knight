@@ -1,4 +1,4 @@
-![](TheLostKnight.png)
+![](img/TheLostKnight.png)
 
 <p align="center">
   <b>A 2D Action/RPG game developed in Unity for the Android platform</b><br>
