@@ -70,7 +70,10 @@ public class CollisionDamage : MonoBehaviour
 
     void Update()
     {
-
+        if(playerHealth == null)
+        {
+            playerHealth = FindObjectOfType<PlayerHealth>();
+        }
     }
 
     public void takeDamage(int damageDealt)

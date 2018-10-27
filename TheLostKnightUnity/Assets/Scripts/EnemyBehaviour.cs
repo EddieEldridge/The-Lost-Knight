@@ -20,24 +20,37 @@ public class EnemyBehaviour : MonoBehaviour
     public bool isPatrolling;
     public bool isChasing;
 
+    void Awake()
+    {
+
+    }
+
     void Start()
     {
         waitTime = startWaitTime;
-        randomSpot = Random.Range(0, moveSpots.Length);    
-        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        randomSpot = Random.Range(0, moveSpots.Length);
         isPatrolling = true;
         isChasing = false;
     }
 
     void Update()
     {
+        if (playerTransform == null)
+        {
+            playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        }
+
         // By default the enemies should just patrol the area
         EnemyPatrol();
-        if (Vector2.Distance(transform.position, playerTransform.position) < aggroRange)
+        if (playerTransform != null)
         {
-            EnemyChase();
+            if (Vector2.Distance(transform.position, playerTransform.position) < aggroRange)
+            {
+                EnemyChase();
+            }
         }
     }
+
 
 
     void EnemyChase()

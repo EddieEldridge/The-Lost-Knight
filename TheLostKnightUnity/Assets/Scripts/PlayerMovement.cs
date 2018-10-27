@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 // Moving left
-                if (moveLeft == true)
+                if (moveLeft == true || Input.GetKeyDown(KeyCode.A))
                 {
                     direction = 1;
                     playerRB.velocity = new Vector2(-moveSpeed, playerRB.velocity.y);
@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 // Moving right
-                if (moveRight == true)
+                if (moveRight == true || Input.GetKeyDown(KeyCode.D))
                 {
                     direction = 2;
                     playerRB.velocity = new Vector2(moveSpeed, playerRB.velocity.y);
@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 // Jumping
-                else if (jump == true && isGrounded == true)
+                else if ((jump == true  || Input.GetKeyDown(KeyCode.Space)) && isGrounded == true )
                 {
                     playerRB.AddForce((Vector2.up) * jumpForce * ((fallMultiplier - 1) * Time.deltaTime));
                 }
