@@ -30,7 +30,7 @@ public class MerchantBehaviour : MonoBehaviour {
 			player = FindObjectOfType<PlayerMovement>();
 		}
 
-		if(merchant=null)
+		if(merchant==null)
 		{
 			merchant = GameObject.FindGameObjectWithTag("Merchant");
 		}
@@ -45,7 +45,8 @@ public class MerchantBehaviour : MonoBehaviour {
 	{
 		if(collidingWith.CompareTag("Player"))
 		{
-			newTradeBubble = Instantiate(tradeBubble, tradeBubble.transform.position, tradeBubble.transform.rotation);
+			Debug.Log(merchant);
+			newTradeBubble = Instantiate(tradeBubble, merchant.transform.position, merchant.transform.rotation);
 		}
 	}
 
