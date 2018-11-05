@@ -10,86 +10,128 @@ public class TouchMovement : MonoBehaviour
     public int rightTouchCount = 0;
     public int leftTouchCount = 0;
 
-    private bool keepGoing =true;
+    private bool keepGoing = true;
     public float timer;
 
     void Start()
     {
-        player = FindObjectOfType<PlayerMovement>();
-        playerAttacking = FindObjectOfType<PlayerAttack>();
-        pauseMenu = FindObjectOfType<PauseMenu>();
     }
 
     void Update()
     {
-        timer+=Time.deltaTime;
+        timer += Time.deltaTime;
 
-        if(timer>0.75f)
+        if (player == null)
         {
-          leftTouchCount = 0;
-          rightTouchCount=0;
-          timer=0f;
+            player = FindObjectOfType<PlayerMovement>();
+        }
+        if (playerAttacking == null)
+        {
+            playerAttacking = FindObjectOfType<PlayerAttack>();
+
+        }
+        if (pauseMenu == null)
+        {
+            pauseMenu = FindObjectOfType<PauseMenu>();
+        }
+
+        if (timer > 0.75f)
+        {
+            leftTouchCount = 0;
+            rightTouchCount = 0;
+            timer = 0f;
         }
     }
 
-    
+
     // Button touch events
     public void LeftArrow()
     {
-        if(player != null)
-    {
-player.moveRight = false;
-        player.moveLeft = true;
-        leftTouchCount++;
-    }
-        
+        if (player != null)
+        {
+            player.moveRight = false;
+            player.moveLeft = true;
+            leftTouchCount++;
+        }
+
     }
 
     public void RightArrow()
     {
-        player.moveRight = true;
-        player.moveLeft = false;
-        rightTouchCount++;
+        if (player != null)
+        {
+            player.moveRight = true;
+            player.moveLeft = false;
+            rightTouchCount++;
+        }
     }
 
     public void ReleaseLeftArrow()
     {
-        player.moveLeft = false;
+        if (player != null)
+        {
+            player.moveLeft = false;
+        }
     }
 
     public void ReleaseRightArrow()
     {
-        player.moveRight = false;
+        if (player != null)
+        {
+            player.moveRight = false;
+        }
     }
 
     public void UpArrow()
     {
-        player.jump = true;
+        if (player != null)
+        {
+            player.jump = true;
+        }
     }
 
     public void ReleaseUpArrow()
     {
-        player.jump = false;
+        if (player != null)
+        {
+            player.jump = false;
+        }
     }
 
     public void FireButton()
     {
-        playerAttacking.isFiring = true;
+        if (playerAttacking != null)
+        {
+            playerAttacking.isFiring = true;
+
+        }
     }
 
     public void RealeaseFireButton()
     {
-        playerAttacking.isFiring = false;
+        if (playerAttacking != null)
+        {
+            playerAttacking.isFiring = false;
+
+        }
     }
 
     public void AttackButton()
     {
-        playerAttacking.isAttacking = true;
+        if (playerAttacking != null)
+        {
+            playerAttacking.isAttacking = true;
+
+        }
     }
 
     public void ReleaseAttackButton()
     {
-        playerAttacking.isAttacking = false;
+        if (playerAttacking != null)
+        {
+            playerAttacking.isAttacking = false;
+
+        }
     }
 
     public void PauseButton()
