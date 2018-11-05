@@ -35,6 +35,10 @@ public class TouchMovement : MonoBehaviour
         {
             pauseMenu = FindObjectOfType<PauseMenu>();
         }
+        if (tradeMenu == null)
+        {
+            tradeMenu = FindObjectOfType<TradeMenu>();
+        }
 
         if (timer > 0.75f)
         {
@@ -104,7 +108,6 @@ public class TouchMovement : MonoBehaviour
         if (playerAttacking != null)
         {
             playerAttacking.isFiring = true;
-
         }
     }
 
@@ -137,6 +140,7 @@ public class TouchMovement : MonoBehaviour
 
     public void PauseButton()
     {
+        Debug.Log("PAUSE BUTTON!");
         if (pauseMenu.GameIsPaused == true)
         {
             pauseMenu.GameIsPaused = false;
@@ -149,7 +153,11 @@ public class TouchMovement : MonoBehaviour
 
     public void TradeButton()
     {
-        if(tradeB)
+        Debug.Log("TRADE BUTTON!");
+        if (tradeMenu != null)
+        {
+            tradeMenu.wantsToTrade = true;
+        }
     }
 
 }
