@@ -52,3 +52,6 @@ Now that i've added patrolling and chasing behaviour to the enemies it's time to
 
 ## 22 October, 2018
 I've sucessfully added a game background for the tutorial level which I can use as a template for all other levels. I also have a blood animation/particle effect that plays when an enemy is hit. The next plan is to work on a pause menu that will display player's information such as their XP level, health and give them options for exiting the game and settings.
+
+## 5 November, 2018
+Since my last entry in my developer diary I have added quite a few new features. I have redesigned the whole UI to give it more of a cohesive them as well as adding new main menu, music and a pause menu. I've also added dashing and blood particles as well as some lighting effects using soft brushes made in Photoshop. I am very happy with how the game is looking so far. I've also added coins that the player can pick up and spend in shops in the game. I think I will keep the shop simple, instead of changing gameplay i'm thinking it will just offer customiziation options such as color change or weapon change but this probably won't affect gameplay too much. Next I would like to finish the tutorial level design as well as adding the shop. 
