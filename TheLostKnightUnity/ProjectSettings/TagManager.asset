@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - HealthBar
   - MovePoint
+  - Merchant
+  - TradeBubble
   layers:
   - Default
   - TransparentFX

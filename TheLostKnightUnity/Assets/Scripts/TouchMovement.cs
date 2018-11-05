@@ -7,6 +7,7 @@ public class TouchMovement : MonoBehaviour
     private PlayerMovement player;
     private PlayerAttack playerAttacking;
     private PauseMenu pauseMenu;
+    private TradeMenu tradeMenu;
     public int rightTouchCount = 0;
     public int leftTouchCount = 0;
 
@@ -144,6 +145,11 @@ public class TouchMovement : MonoBehaviour
         {
             pauseMenu.GameIsPaused = true;
         }
+    }
+
+    public void TradeButton()
+    {
+        if(tradeB)
     }
 
 }
