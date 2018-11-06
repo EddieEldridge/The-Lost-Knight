@@ -8,12 +8,34 @@ public class TextDisplay : MonoBehaviour
 {
 
     // Variables
-    public float coinAmount;
+    public int coinAmount;
+    public int arrowAmount;
     public Text coinText;
+    public Text arrowText;
 
     // Update is called once per frame
+    void Start()
+    {
+        arrowAmount=10;
+    }
+
     void Update()
     {
-        coinText.text = "Coins: " + coinAmount;
+        if(coinText.text!=null)
+        {
+             coinText.text = "Coins: " + coinAmount;
+        }
+        else
+        {
+            return;
+        }
+        if(arrowText.text!=null)
+        {
+        arrowText.text = "Arrows: " + arrowAmount;
+        }
+        else
+        {
+            return;
+        }
     }
 }

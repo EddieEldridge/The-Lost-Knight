@@ -23,6 +23,9 @@ public class PlayerAttack : MonoBehaviour
     float offset = 5;
     public bool isFiring;
 
+    private TextDisplay textDisplay;
+
+
     void Start()
     {
         arrowLayer = gameObject.layer;
@@ -33,10 +36,15 @@ public class PlayerAttack : MonoBehaviour
     {
         cooldownTimer -= Time.deltaTime;
 
-        // Shooting script
-        if (isFiring == true && cooldownTimer <= 0)
+        if(textDisplay==null)
         {
-            // Debug.Log("Player Shooting!");
+            textDisplay = FindObjectOfType<TextDisplay>();
+        }
+
+        // Shooting script
+        if (isFiring == true && cooldownTimer <= 0 && textDisplay.arrowAmount>0)
+        {
+            textDisplay.arrowAmount -=1;
 
             // Set delay in between shots
             cooldownTimer = fireDelay;

@@ -22,8 +22,11 @@ public class ItemCount : MonoBehaviour
     {
         if (collidingWith.CompareTag("Player"))
         {
-            coinFX.Play();        
-            textDisplay.coinAmount++;
+            coinFX.Play();     
+            if(textDisplay!=null)
+            {
+             textDisplay.coinAmount++;
+            }  
             Destroy(gameObject, coinFXClip.length);
         }
     }
