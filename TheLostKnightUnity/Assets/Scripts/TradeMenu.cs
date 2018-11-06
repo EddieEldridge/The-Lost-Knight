@@ -16,13 +16,11 @@ public class TradeMenu : MonoBehaviour
     {
         if(wantsToTrade==true)
         {
-            Debug.Log("TRADING!");
-            TradeMenuUI.SetActive(true);
             Pause();
         }
         else
         {
-
+            Resume();
         }
     }
     public void Resume()
@@ -34,8 +32,14 @@ public class TradeMenu : MonoBehaviour
 
     public void Pause()
     {
+        TradeMenuUI.SetActive(true);
         Time.timeScale = 0f;
         wantsToTrade = true;
+    }
+
+    public void ExitShop()
+    {
+        Resume();
     }
 
 }

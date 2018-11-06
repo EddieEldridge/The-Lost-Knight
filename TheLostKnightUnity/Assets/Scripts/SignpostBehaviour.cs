@@ -7,7 +7,7 @@ public class SignpostBehaviour : MonoBehaviour {
 	// Variables
 	private PlayerMovement player;
 	public GameObject textBubble;
-	private GameObject signpost;
+	public GameObject signpost;
 	private GameObject newTextBubble;
 
 	// Use this for initialization
