@@ -7,6 +7,7 @@ public class TradeMenu : MonoBehaviour
     // Variables
     public bool wantsToTrade = false;
     public GameObject TradeMenuUI;
+    
 
     void Start()
     {
@@ -41,5 +42,26 @@ public class TradeMenu : MonoBehaviour
     {
         Resume();
     }
+
+    public void RestoreHealth()
+    {
+
+    }
+
+    public void SpeedBoost()
+    {
+
+    }
+
+    public void DamageBoost()
+    {
+
+    }
+
+    public void AttackSpeed()
+    {
+
+    }
+    
 
 }
