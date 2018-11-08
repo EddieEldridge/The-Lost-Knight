@@ -58,3 +58,6 @@ Since my last entry in my developer diary I have added quite a few new features.
 
 # 6th November, 2018
 I have managed to successfully add a shop which was part of the design brief for the game. The player can approach a merchant character upon which a prompt to trade will appear. They can then touch the merchant to begin trading. They are then greeted with some options regarding what things they can spend their gold on as well as how much it will cost. I would like to expand on what options are available from the shop but at the moment I just want to focus on completing the game in general.
+
+# 8th November, 2018
+I have added a splash screen as well as some an options menu with no functionality yet. I have also expanded upon the tutorial design. I am getting close to finishing the first level, I just need to fix some small bugs with movement and add a ranged attack to the Wraith enemy. Then I can start designing and building the levels outlined in the design document.
