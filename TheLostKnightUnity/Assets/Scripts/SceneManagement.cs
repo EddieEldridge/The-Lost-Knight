@@ -5,22 +5,63 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
+    public GameObject MainMenu;
+    public GameObject OptionsMenu;
+    public GameObject LevelChooser;
 
-    public void StartGame()
+    void Start()
     {
-        Debug.Log("Play button!");
+        MainMenu.SetActive(true);
+        OptionsMenu.SetActive(false);
+        LevelChooser.SetActive(false);
+    }
+
+    public void StartTutorial()
+    {
 		SceneManager.LoadScene("Tutorial");
+    }
+
+       public void StartLevel1()
+    {
+		SceneManager.LoadScene("Tutorial");
+    }
+
+       public void StartLevel2()
+    {
+		SceneManager.LoadScene("Tutorial");
+    }
+
+       public void StartLevel3()
+    {
+		SceneManager.LoadScene("Tutorial");
+    }
+
+       public void StartLevel4()
+    {
+		SceneManager.LoadScene("Tutorial");
+    }
+
+    public void ChooseLevel()
+    {
+        MainMenu.SetActive(false);
+        OptionsMenu.SetActive(false);
+        LevelChooser.SetActive(true);
     }
 
     public void OpenOptions()
     {
-        Debug.Log("Options button!");
-		SceneManager.LoadScene("Tutorial");
+        MainMenu.SetActive(false);
+        OptionsMenu.SetActive(true);
     }
 
+    public void ReturnToMenu()
+    {
+        MainMenu.SetActive(true);
+        OptionsMenu.SetActive(false);
+        LevelChooser.SetActive(false);
+    }
     public void ExitGame()
     {
-        Debug.Log("Exit button!");
 		Application.Quit();    
 	}
 }
