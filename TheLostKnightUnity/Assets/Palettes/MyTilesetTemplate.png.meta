@@ -31,6 +31,7 @@ TextureImporter:
     21300052: MyTilesetTemplate_3
     21300054: MyTilesetTemplate_9
     21300056: MyTilesetTemplate_15
+    21300058: MyTilesetTemplate_16
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -143,8 +144,8 @@ TextureImporter:
         width: 194
         height: 201
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -160,11 +161,11 @@ TextureImporter:
         serializedVersion: 2
         x: 250
         y: 1325
-        width: 248
+        width: 239
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 2, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -178,12 +179,12 @@ TextureImporter:
       name: MyTilesetTemplate_2
       rect:
         serializedVersion: 2
-        x: 500
+        x: 489
         y: 1325
-        width: 202
-        height: 199
+        width: 213
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,7 +204,7 @@ TextureImporter:
         width: 211
         height: 219
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +219,12 @@ TextureImporter:
       name: MyTilesetTemplate_5
       rect:
         serializedVersion: 2
-        x: 1300
+        x: 1302
         y: 1324
-        width: 218
+        width: 216
         height: 202
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,7 +244,7 @@ TextureImporter:
         width: 193
         height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -258,12 +259,12 @@ TextureImporter:
       name: MyTilesetTemplate_7
       rect:
         serializedVersion: 2
-        x: 250
-        y: 1075
-        width: 250
-        height: 250
+        x: 253
+        y: 1095
+        width: 227
+        height: 229
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,12 +279,12 @@ TextureImporter:
       name: MyTilesetTemplate_8
       rect:
         serializedVersion: 2
-        x: 500
-        y: 1075
-        width: 204
-        height: 250
+        x: 482
+        y: 1076
+        width: 215
+        height: 249
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -298,12 +299,12 @@ TextureImporter:
       name: MyTilesetTemplate_10
       rect:
         serializedVersion: 2
-        x: 1017
-        y: 1007
-        width: 217
-        height: 224
+        x: 1018
+        y: 1010
+        width: 214
+        height: 217
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,12 +319,12 @@ TextureImporter:
       name: MyTilesetTemplate_11
       rect:
         serializedVersion: 2
-        x: 1298
+        x: 1301
         y: 1075
-        width: 219
+        width: 216
         height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -340,10 +341,10 @@ TextureImporter:
         serializedVersion: 2
         x: 56
         y: 877
-        width: 195
-        height: 198
+        width: 221
+        height: 199
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -358,12 +359,12 @@ TextureImporter:
       name: MyTilesetTemplate_13
       rect:
         serializedVersion: 2
-        x: 250
+        x: 275
         y: 877
-        width: 236
-        height: 198
+        width: 206
+        height: 197
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,12 +379,12 @@ TextureImporter:
       name: MyTilesetTemplate_14
       rect:
         serializedVersion: 2
-        x: 482
-        y: 881
-        width: 213
-        height: 194
+        x: 483
+        y: 878
+        width: 215
+        height: 196
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -403,7 +404,7 @@ TextureImporter:
         width: 218
         height: 202
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -423,7 +424,7 @@ TextureImporter:
         width: 218
         height: 217
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -440,8 +441,8 @@ TextureImporter:
         serializedVersion: 2
         x: 487
         y: 552
-        width: 217
-        height: 218
+        width: 216
+        height: 216
       alignment: 9
       pivot: {x: 0.50343263, y: 0.5000003}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,12 +459,12 @@ TextureImporter:
       name: MyTilesetTemplate_21
       rect:
         serializedVersion: 2
-        x: 750
+        x: 753
         y: 632
-        width: 221
-        height: 233
+        width: 217
+        height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -478,13 +479,13 @@ TextureImporter:
       name: MyTilesetTemplate_22
       rect:
         serializedVersion: 2
-        x: 970
-        y: 632
-        width: 206
+        x: 969
+        y: 633
+        width: 212
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -503,8 +504,8 @@ TextureImporter:
         width: 216
         height: 216
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -523,7 +524,7 @@ TextureImporter:
         width: 218
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -539,11 +540,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 488
-        y: 338
-        width: 219
-        height: 213
+        y: 339
+        width: 216
+        height: 214
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -558,12 +559,12 @@ TextureImporter:
       name: MyTilesetTemplate_27
       rect:
         serializedVersion: 2
-        x: 749
-        y: 432
-        width: 218
-        height: 200
+        x: 753
+        y: 434
+        width: 214
+        height: 196
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -580,10 +581,10 @@ TextureImporter:
         serializedVersion: 2
         x: 968
         y: 434
-        width: 210
+        width: 213
         height: 197
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -603,7 +604,7 @@ TextureImporter:
         width: 218
         height: 216
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -621,10 +622,10 @@ TextureImporter:
         x: 272
         y: 119
         width: 215
-        height: 217
+        height: 216
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -639,11 +640,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 488
-        y: 118
-        width: 219
-        height: 222
+        y: 122
+        width: 215
+        height: 217
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -658,12 +659,12 @@ TextureImporter:
       name: MyTilesetTemplate_3
       rect:
         serializedVersion: 2
-        x: 756
+        x: 753
         y: 1311
-        width: 213
-        height: 212
+        width: 216
+        height: 214
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -678,12 +679,12 @@ TextureImporter:
       name: MyTilesetTemplate_9
       rect:
         serializedVersion: 2
-        x: 751
-        y: 1009
-        width: 217
-        height: 223
+        x: 754
+        y: 1011
+        width: 213
+        height: 216
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -703,7 +704,7 @@ TextureImporter:
         width: 215
         height: 216
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
