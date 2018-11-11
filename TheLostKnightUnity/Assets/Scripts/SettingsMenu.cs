@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour
 {
+    public AudioMixer audioMixer; 
 
-    // Use this for initialization
-    public void SetVolume()
+    public void SetVolume(float volume)
     {
-
+        audioMixer.SetFloat("volume", volume);
     }
 }
