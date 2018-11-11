@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class CollisionDamage : MonoBehaviour
 {
@@ -66,7 +68,6 @@ public class CollisionDamage : MonoBehaviour
             Debug.Log("Damage Dealt to Player: " + damageDealt);
         }
 
-        
     }
 
     void Update()

@@ -14,7 +14,7 @@ public class ItemCount : MonoBehaviour
     {
         textDisplay = FindObjectOfType<TextDisplay>();
         GetComponent<AudioSource>().playOnAwake = false;
-        coinFX=GetComponent<AudioSource>();
+        coinFX = GetComponent<AudioSource>();
         coinFXClip = coinFX.clip;
     }
 
@@ -22,11 +22,14 @@ public class ItemCount : MonoBehaviour
     {
         if (collidingWith.CompareTag("Player"))
         {
-            coinFX.Play();     
-            if(textDisplay!=null)
+            coinFX.Play();
+            if (textDisplay != null)
             {
-             textDisplay.coinAmount++;
-            }  
+                textDisplay.UpdateCoins();
+                Debug.Log("coin++");
+                textDisplay.coinAmount++;
+                Debug.Log("Coin amount: " + textDisplay.coinAmount++);
+            }
             Destroy(gameObject, coinFXClip.length);
         }
     }

@@ -9,11 +9,13 @@ public class SceneManagement : MonoBehaviour
     public GameObject OptionsMenu;
     public GameObject LevelChooser;
 
+
     void Start()
     {
         MainMenu.SetActive(true);
         OptionsMenu.SetActive(false);
         LevelChooser.SetActive(false);
+      
     }
 
     public void StartTutorial()
@@ -60,8 +62,11 @@ public class SceneManagement : MonoBehaviour
         OptionsMenu.SetActive(false);
         LevelChooser.SetActive(false);
     }
+
     public void ExitGame()
     {
 		Application.Quit();    
-	}
+  	}
+
+   
 }

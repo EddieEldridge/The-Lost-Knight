@@ -57,6 +57,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, playerTransform.position) < aggroRange)
             {
+                Timer();
                 EnemyChase();
             }
         }
@@ -66,10 +67,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     void EnemyChase()
     {
-        Timer();
         if (playerTransform != null)
         {
-            Debug.Log("Chasing player!");
             isChasing = true;
             transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
         }
@@ -103,7 +102,7 @@ public class EnemyBehaviour : MonoBehaviour
     public IEnumerator Timer()
     {
         Instantiate(exclamationPoint,  enemy.transform.position + new Vector3(0,8,20), enemy.transform.rotation);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         Destroy(exclamationPoint);
     }
 }

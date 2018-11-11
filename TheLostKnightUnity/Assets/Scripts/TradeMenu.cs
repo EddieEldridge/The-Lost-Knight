@@ -75,11 +75,16 @@ public class TradeMenu : MonoBehaviour
 
     public void SpeedBoost()
     {
-        if (textDisplay.coinAmount >= 20)
+        if(textDisplay!=null)
         {
-            playerMovement.moveSpeed = playerMovement.moveSpeed * 1.5f;
-            textDisplay.coinAmount -= 20;
+            Debug.Log("in");
+        if (textDisplay.coinAmount >= 20)
+                {
+                    playerMovement.moveSpeed = playerMovement.moveSpeed * 1.5f;
+                    textDisplay.coinAmount -= 20;
+                }
         }
+     
     }
 
     public void DamageBoost()

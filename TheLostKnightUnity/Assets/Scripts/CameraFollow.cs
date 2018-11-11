@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraFollow : MonoBehaviour
 {
     // Variables
@@ -14,6 +15,9 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
+
+       
+
         if (player == null)
         {
             player = GameObject.Find("PlayerPrefab(Clone)");
@@ -23,5 +27,9 @@ public class CameraFollow : MonoBehaviour
             transform.position = player.transform.position + offset;
         }
     }
+
+   
+
+    
 }
 

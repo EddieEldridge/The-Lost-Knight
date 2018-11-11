@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: f423715e91f289d46a66dd4af512d26f
+  - enabled: 1
+    path: Assets/Scenes/CreepingWillow.unity
+    guid: 7cb6188c46bb24b43973de0ef6b3d70a
   m_configObjects: {}
