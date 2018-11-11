@@ -9,10 +9,15 @@ public class SplashFade : MonoBehaviour
 	// Variables
 	public Image splashImage;
 	public bool isSplashScreen=false;
+	Scene currentScene;
+    string currentSceneName;
+	public bool isDead;
 
-
+	
 	IEnumerator Start()
 	{
+		currentSceneName = currentScene.name;
+		currentScene = SceneManager.GetActiveScene();
 		splashImage.canvasRenderer.SetAlpha(0.0f);
 
 		FadeIn();
@@ -26,6 +31,12 @@ public class SplashFade : MonoBehaviour
 		if(isSplashScreen==true)
 		{
 		 SceneManager.LoadScene("Menu");
+		}
+
+		if(isDead==true)
+		{
+			Debug.Log("inside function");
+     		SceneManager.LoadScene(currentSceneName);
 		}
 	}
 

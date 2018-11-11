@@ -13,7 +13,8 @@ public class PlayerHealth : MonoBehaviour
     public float playerMaxHealth = 100;
     public float playerHealth;
     float healthPercentage;
-    public GameObject deathDisplay;
+    public GameObject UI;
+    private SplashFade splashFade;
 
     private CollisionDamage collisionDamage;
 
@@ -22,12 +23,10 @@ public class PlayerHealth : MonoBehaviour
     {
 		
         GameObject healthBarObject = GameObject.FindGameObjectWithTag("HealthBar");
-
+        splashFade = FindObjectOfType<SplashFade>();
         playerHealth = playerMaxHealth;
 
         healthBarImage = healthBarObject.GetComponent<Image>();
-		deathDisplay.SetActive(false);
-
 
         collisionDamage = FindObjectOfType<CollisionDamage>();
     }
@@ -35,21 +34,15 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deathDisplay == null)
-        {
-			Debug.Log(deathDisplay);
-        }
-
         healthPercentage = playerHealth / playerMaxHealth;
         healthBarImage.fillAmount = healthPercentage;
 
         if (playerHealth <= 0)
         {
-            Debug.Log(deathDisplay);
-            Time.timeScale = 0f;
-            if (deathDisplay != null)
+            if (UI != null)
             {
-                deathDisplay.SetActive(true);
+                splashFade.isDead=true;
+                UI.SetActive(false);
             }
         }
     }
