@@ -20,7 +20,7 @@ public class CameraFollow : MonoBehaviour
 
         if (player == null)
         {
-            player = GameObject.Find("PlayerPrefab(Clone)");
+            player = GameObject.Find("PlayerPrefab");
         }
         else
         {

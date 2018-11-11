@@ -13,23 +13,23 @@ public class PlayerHealth : MonoBehaviour
     public float playerMaxHealth = 100;
     public float playerHealth;
     float healthPercentage;
-    private GameObject deathDisplay;
+    public GameObject deathDisplay;
 
     private CollisionDamage collisionDamage;
 
     // Use this for initialization
     void Start()
     {
+		
         GameObject healthBarObject = GameObject.FindGameObjectWithTag("HealthBar");
 
         playerHealth = playerMaxHealth;
 
         healthBarImage = healthBarObject.GetComponent<Image>();
-        deathDisplay = GameObject.FindGameObjectWithTag("DeathMenu");
+		deathDisplay.SetActive(false);
 
 
         collisionDamage = FindObjectOfType<CollisionDamage>();
-        Debug.Log(deathDisplay);
     }
 
     // Update is called once per frame
@@ -37,9 +37,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (deathDisplay == null)
         {
-            deathDisplay = GameObject.FindGameObjectWithTag("DeathMenu");
-            Debug.Log("Found death menu");
-
+			Debug.Log(deathDisplay);
         }
 
         healthPercentage = playerHealth / playerMaxHealth;
