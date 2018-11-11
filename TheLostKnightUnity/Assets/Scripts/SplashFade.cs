@@ -8,6 +8,8 @@ public class SplashFade : MonoBehaviour
 {
 	// Variables
 	public Image splashImage;
+	public bool isSplashScreen=false;
+
 
 	IEnumerator Start()
 	{
@@ -20,7 +22,11 @@ public class SplashFade : MonoBehaviour
 		FadeOut();
 		
 		yield return new WaitForSeconds(2.5f);
-		SceneManager.LoadScene("Menu");
+
+		if(isSplashScreen==true)
+		{
+		 SceneManager.LoadScene("Menu");
+		}
 	}
 
 	void FadeIn()

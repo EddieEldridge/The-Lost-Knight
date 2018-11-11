@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splashImage: {fileID: 1807819817}
+  isSplashScreen: 1
 --- !u!1 &780587832
 GameObject:
   m_ObjectHideFlags: 0
