@@ -42,17 +42,21 @@ public class PlayerAttack : MonoBehaviour
         }
 
         // Shooting script
-        if (isFiring == true && cooldownTimer <= 0 && textDisplay.arrowAmount>0)
+        if(textDisplay!=null)
         {
-            textDisplay.arrowAmount -=1;
+            if (isFiring == true && cooldownTimer <= 0 && textDisplay.arrowAmount>0)
+            {
+                textDisplay.arrowAmount -=1;
 
-            // Set delay in between shots
-            cooldownTimer = fireDelay;
+                // Set delay in between shots
+                cooldownTimer = fireDelay;
 
-            // Create instance of bulletPrefab every time player 'fires'
-            GameObject arrowGO = (GameObject)Instantiate(arrowPrefab, transform.position + (offset * transform.forward), Quaternion.identity);
-            arrowGO.layer = arrowLayer;
+                // Create instance of bulletPrefab every time player 'fires'
+                GameObject arrowGO = (GameObject)Instantiate(arrowPrefab, transform.position + (offset * transform.forward), Quaternion.identity);
+                arrowGO.layer = arrowLayer;
+            }
         }
+
 
         // Melee attacking script
         if (timeBetweenAttack <= 0)

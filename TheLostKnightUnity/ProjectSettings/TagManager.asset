@@ -12,6 +12,7 @@ TagManager:
   - TradeBubble
   - Signpost
   - TextBubble
+  - ExclamationPoint
   layers:
   - Default
   - TransparentFX

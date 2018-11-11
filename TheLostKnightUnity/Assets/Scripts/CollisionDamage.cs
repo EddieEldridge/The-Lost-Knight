@@ -79,6 +79,7 @@ public class CollisionDamage : MonoBehaviour
 
     public void takeDamage(int damageDealt)
     {
+        Handheld.Vibrate();
         particleSystem.Play();
         cameraShake.shakeCamera();
         enemyHealth.enemyHealth -= damageDealt;

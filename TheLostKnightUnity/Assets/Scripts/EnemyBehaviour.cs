@@ -13,7 +13,8 @@ public class EnemyBehaviour : MonoBehaviour
     private int randomSpot;
     private Transform playerTransform;
     public float aggroRange;
-
+    public GameObject exclamationPoint;
+    public GameObject enemy;
 
 
 
@@ -40,6 +41,16 @@ public class EnemyBehaviour : MonoBehaviour
             playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         }
 
+        if(exclamationPoint==null)
+		{
+			exclamationPoint = GameObject.FindGameObjectWithTag("ExclamationPoint");
+		}
+
+        if(enemy==null)
+		{
+			enemy = GameObject.FindGameObjectWithTag("Enemy");
+		}
+
         // By default the enemies should just patrol the area
         EnemyPatrol();
         if (playerTransform != null)
@@ -55,8 +66,10 @@ public class EnemyBehaviour : MonoBehaviour
 
     void EnemyChase()
     {
+        Timer();
         if (playerTransform != null)
         {
+            Debug.Log("Chasing player!");
             isChasing = true;
             transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
         }
@@ -85,6 +98,12 @@ public class EnemyBehaviour : MonoBehaviour
             }
 
         }
+    }
 
+    public IEnumerator Timer()
+    {
+        Instantiate(exclamationPoint,  enemy.transform.position + new Vector3(0,8,20), enemy.transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Destroy(exclamationPoint);
     }
 }
