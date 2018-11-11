@@ -45,7 +45,7 @@ public class MerchantBehaviour : MonoBehaviour {
 	{
 		if(collidingWith.CompareTag("Player"))
 		{
-			newTradeBubble = Instantiate(tradeBubble, merchant.transform.position, merchant.transform.rotation);
+			newTradeBubble = Instantiate(tradeBubble, merchant.transform.position + new Vector3(8,8,20), merchant.transform.rotation);
 		}
 	}
 

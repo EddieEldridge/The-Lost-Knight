@@ -26,9 +26,6 @@ public class PlayerMovement : MonoBehaviour
     public float startDashTime;
     public int direction = 0;
 
-
-
-
     // variable to hold a reference to our SpriteRenderer component
     private SpriteRenderer mySpriteRenderer;
     private ParticleSystem myParticleSystem;
@@ -100,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 // Jumping
-                else if ((jump == true  || Input.GetKeyDown(KeyCode.Space)) && isGrounded == true )
+                if ((jump == true  || Input.GetKeyDown(KeyCode.Space)) && isGrounded == true )
                 {
                     playerRB.AddForce((Vector2.up) * jumpForce * ((fallMultiplier - 1) * Time.deltaTime));
                 }
