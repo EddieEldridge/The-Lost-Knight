@@ -4,50 +4,85 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SplashFade : MonoBehaviour 
+public class SplashFade : MonoBehaviour
 {
-	// Variables
-	public Image splashImage;
-	public bool isSplashScreen=false;
-	Scene currentScene;
+    // Variables
+    public Image splashImage;
+    public bool isSplashScreen = false;
+    Scene currentScene;
     string currentSceneName;
-	public bool isDead;
+    public bool isDead;
+    public bool isTitleScreen;
 
-	
-	IEnumerator Start()
-	{
-		currentSceneName = currentScene.name;
-		currentScene = SceneManager.GetActiveScene();
-		splashImage.canvasRenderer.SetAlpha(0.0f);
+    void Update()
+    {
+        if (isDead == true)
+        {
+            Death();
+        }
+    }
 
-		FadeIn();
+    IEnumerator Start()
+    {
+        if (isSplashScreen == true)
+        {
+            splashImage.canvasRenderer.SetAlpha(0.0f);
 
-		yield return new WaitForSeconds(2.5f);
+            FadeIn();
 
-		FadeOut();
-		
-		yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(2.5f);
 
-		if(isSplashScreen==true)
-		{
-		 SceneManager.LoadScene("Menu");
-		}
+            FadeOut();
 
-		if(isDead==true)
-		{
-			Debug.Log("inside function");
-     		SceneManager.LoadScene(currentSceneName);
-		}
-	}
+            yield return new WaitForSeconds(2.5f);
 
-	void FadeIn()
-	{
-		splashImage.CrossFadeAlpha(1.0f, 1.5f, false);
-	}
+            SceneManager.LoadScene("Menu");
+        }
 
-	void FadeOut()
-	{
-		splashImage.CrossFadeAlpha(0f, 2.5f, false);
-	}
+        if (isTitleScreen == true)
+        {
+            splashImage.canvasRenderer.SetAlpha(0.0f);
+
+            FadeIn();
+
+            yield return new WaitForSeconds(2.5f);
+
+            FadeOut();
+
+            yield return new WaitForSeconds(2.5f);
+        }
+    }
+
+    IEnumerator Death()
+    {
+        Debug.Log("Here");
+        splashImage.canvasRenderer.SetAlpha(0.0f);
+        Debug.Log("Here1");
+
+        FadeIn();
+
+        yield return new WaitForSeconds(2.5f);
+        Debug.Log("Here2");
+
+        FadeOut();
+
+        yield return new WaitForSeconds(2.5f);
+        Debug.Log("Here3");
+
+        currentScene = SceneManager.GetActiveScene();
+        currentSceneName = currentScene.name;
+        SceneManager.LoadScene(currentSceneName);
+    }
+
+
+    void FadeIn()
+    {
+        splashImage.CrossFadeAlpha(1.0f, 1.5f, false);
+    }
+
+    void FadeOut()
+    {
+        splashImage.CrossFadeAlpha(0f, 2.5f, false);
+    }
 
 }

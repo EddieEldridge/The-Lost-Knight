@@ -25,9 +25,12 @@ public class PlayerAttack : MonoBehaviour
 
     private TextDisplay textDisplay;
 
+    private Animation attackAnim;
+
 
     void Start()
     {
+        attackAnim = gameObject.GetComponent<Animation>();
         arrowLayer = gameObject.layer;
     }
 
@@ -36,17 +39,17 @@ public class PlayerAttack : MonoBehaviour
     {
         cooldownTimer -= Time.deltaTime;
 
-        if(textDisplay==null)
+        if (textDisplay == null)
         {
             textDisplay = FindObjectOfType<TextDisplay>();
         }
 
         // Shooting script
-        if(textDisplay!=null)
+        if (textDisplay != null)
         {
-            if (isFiring == true && cooldownTimer <= 0 && textDisplay.arrowAmount>0)
+            if (isFiring == true && cooldownTimer <= 0 && textDisplay.arrowAmount > 0)
             {
-                textDisplay.arrowAmount -=1;
+                textDisplay.arrowAmount -= 1;
 
                 // Set delay in between shots
                 cooldownTimer = fireDelay;
@@ -64,6 +67,7 @@ public class PlayerAttack : MonoBehaviour
             if (isAttacking == true)
             {
                 Handheld.Vibrate();
+                attackAnim.Play();
                 timeBetweenAttack = startTimeBetweenAttack;
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
 

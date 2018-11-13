@@ -100,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
                 if ((jump == true  || Input.GetKeyDown(KeyCode.Space)) && isGrounded == true )
                 {
                     playerRB.AddForce((Vector2.up) * jumpForce * ((fallMultiplier - 1) * Time.deltaTime));
+                    isGrounded=false;
                 }
 
 
@@ -110,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
                     direction = 0;
                     dashTime = startDashTime;
                     playerRB.velocity = Vector2.zero;
+                    Debug.Log("Velocity reset");
                 }
                 else
                 {

@@ -26,18 +26,18 @@ public class TextDisplay : MonoBehaviour
     public void UpdateCoins()
     {
         if (coinText.text != null)
-                {
-                    coinText.text = "" + coinAmount;
-                }
-                else
-                {
-                    return;
-                }
+        {
+            coinText.text = "" + coinAmount;
+        }
+        else
+        {
+            return;
+        }
     }
 
     public void UpdateArrows()
     {
-           if (arrowText.text != null)
+        if (arrowText.text != null)
         {
             arrowText.text = "" + arrowAmount;
         }
