@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     // Variables
     Image healthBarImage;
 
+
     public float playerMaxHealth = 100;
     public float playerHealth;
     float healthPercentage;
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     {
 		
         GameObject healthBarObject = GameObject.FindGameObjectWithTag("HealthBar");
+
         splashFade = FindObjectOfType<SplashFade>();
         playerHealth = playerMaxHealth;
 

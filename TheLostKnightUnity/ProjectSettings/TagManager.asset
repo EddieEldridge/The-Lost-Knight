@@ -15,6 +15,7 @@ TagManager:
   - ExclamationPoint
   - SceneTransition
   - DeathMenu
+  - StaminaBar
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
     public float dashTime;
     public float startDashTime;
     public int direction = 0;
+
+    public float playerMaxStamina = 100;
+    public float playerStamina;
+    float staminaPercentage;
+    Image staminaBarImage;
+    public float staminaRegenRate;
 
     // variable to hold a reference to our SpriteRenderer component
     private SpriteRenderer mySpriteRenderer;
@@ -57,19 +64,29 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        playerStamina = playerMaxStamina;
         // Assign our Player's rigidybody to 'rigidbody'
         playerRB = GetComponent<Rigidbody2D>();
         PlayerCollider = GetComponent<Collider2D>();
         touchMovement = FindObjectOfType<TouchMovement>();
+
+        GameObject staminaBarObject = GameObject.FindGameObjectWithTag("StaminaBar");
+
+        staminaBarImage = staminaBarObject.GetComponent<Image>();
 
         dashTime = startDashTime;
     }
 
     void Update()
     {
+        // Stamina bar stufff
+        staminaPercentage = playerStamina / playerMaxStamina;
+        staminaBarImage.fillAmount = staminaPercentage;
 
         // Assign players postion to a Vector3 named pos
         Vector3 pos = transform.position;
+
+        playerStamina += staminaRegenRate * Time.deltaTime;
 
         // if the variable isn't empty (we have a reference to our SpriteRenderer)
         if (mySpriteRenderer != null)
@@ -82,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
                 if (moveLeft == true || Input.GetKeyDown(KeyCode.A))
                 {
                     direction = 1;
+                    playerStamina-=1;
                     playerRB.velocity = new Vector2(-moveSpeed, playerRB.velocity.y);
                     // flip the sprite
                     mySpriteRenderer.flipX = true;
@@ -90,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
                 // Moving right
                 if (moveRight == true || Input.GetKeyDown(KeyCode.D))
                 {
+                    playerStamina-=1;
                     direction = 2;
                     playerRB.velocity = new Vector2(moveSpeed, playerRB.velocity.y);
                     // flip the sprite
@@ -97,37 +116,41 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 // Jumping
-                if ((jump == true  || Input.GetKeyDown(KeyCode.Space)) && isGrounded == true )
+                if ((jump == true || Input.GetKeyDown(KeyCode.Space)) && isGrounded == true)
                 {
+                    playerStamina-=10;
                     playerRB.AddForce((Vector2.up) * jumpForce * ((fallMultiplier - 1) * Time.deltaTime));
-                    isGrounded=false;
+                    isGrounded = false;
                 }
 
 
                 // Dashing
                 // Android touch movement
-                if (dashTime <= 0)
+                if (playerStamina <= 0)
                 {
                     direction = 0;
-                    dashTime = startDashTime;
+                   // dashTime = startDashTime;
                     playerRB.velocity = Vector2.zero;
-                    Debug.Log("Velocity reset");
                 }
                 else
                 {
-                    dashTime -= Time.deltaTime;
+                    //dashTime -= Time.deltaTime;
 
-                    if (direction == 1 && touchMovement.leftTouchCount >= 2)
+                    if (direction == 1 && touchMovement.leftTouchCount >= 2 && playerStamina>25)
                     {
                         myParticleSystem.Play();
-                        playerRB.velocity = Vector2.left * dashSpeed;
+                        playerRB.velocity = Vector2.left * dashSpeed * Time.deltaTime;
+                        playerStamina-=25;
+                        //playerRB.AddForce((Vector2.right) * dashSpeed  * Time.deltaTime);
                     }
 
                     // Android touch movement
-                    if (direction == 2 && touchMovement.rightTouchCount >= 2)
+                    if (direction == 2 && touchMovement.rightTouchCount >= 2 && playerStamina>25)
                     {
                         myParticleSystem.Play();
-                        playerRB.velocity = Vector2.right * dashSpeed;
+                        //playerRB.AddForce((Vector2.left) * dashSpeed * Time.deltaTime);
+                        playerStamina-=25;
+                        playerRB.velocity = Vector2.right * dashSpeed * Time.deltaTime;
                     }
 
                 }
