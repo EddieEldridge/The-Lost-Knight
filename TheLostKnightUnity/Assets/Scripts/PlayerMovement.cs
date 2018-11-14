@@ -22,12 +22,11 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
 
 
-    public float dashSpeed;
-    public float dashTime;
-    public float startDashTime;
+    public float dashForce;
+    public float dashMultiplier;
     public int direction = 0;
 
-    public float playerMaxStamina = 100;
+    public float playerMaxStamina = 300;
     public float playerStamina;
     float staminaPercentage;
     Image staminaBarImage;
@@ -74,10 +73,9 @@ public class PlayerMovement : MonoBehaviour
 
         staminaBarImage = staminaBarObject.GetComponent<Image>();
 
-        dashTime = startDashTime;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // Stamina bar stufff
         staminaPercentage = playerStamina / playerMaxStamina;
@@ -86,7 +84,10 @@ public class PlayerMovement : MonoBehaviour
         // Assign players postion to a Vector3 named pos
         Vector3 pos = transform.position;
 
+        if(playerStamina<playerMaxStamina)
+        {
         playerStamina += staminaRegenRate * Time.deltaTime;
+        }
 
         // if the variable isn't empty (we have a reference to our SpriteRenderer)
         if (mySpriteRenderer != null)
@@ -129,17 +130,13 @@ public class PlayerMovement : MonoBehaviour
                 if (playerStamina <= 0)
                 {
                     direction = 0;
-                   // dashTime = startDashTime;
-                    playerRB.velocity = Vector2.zero;
                 }
                 else
                 {
-                    //dashTime -= Time.deltaTime;
-
                     if (direction == 1 && touchMovement.leftTouchCount >= 2 && playerStamina>25)
                     {
                         myParticleSystem.Play();
-                        playerRB.velocity = Vector2.left * dashSpeed * Time.deltaTime;
+                        playerRB.velocity = Vector2.left * dashForce *  dashMultiplier *Time.deltaTime;
                         playerStamina-=25;
                         //playerRB.AddForce((Vector2.right) * dashSpeed  * Time.deltaTime);
                     }
@@ -150,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
                         myParticleSystem.Play();
                         //playerRB.AddForce((Vector2.left) * dashSpeed * Time.deltaTime);
                         playerStamina-=25;
-                        playerRB.velocity = Vector2.right * dashSpeed * Time.deltaTime;
+                        playerRB.velocity = Vector2.right * dashForce * dashMultiplier * Time.deltaTime;
                     }
 
                 }
