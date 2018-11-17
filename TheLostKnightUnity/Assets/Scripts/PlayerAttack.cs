@@ -49,6 +49,7 @@ public class PlayerAttack : MonoBehaviour
         {
             if (isFiring == true && cooldownTimer <= 0 && textDisplay.arrowAmount > 0)
             {
+                textDisplay.UpdateArrows();
                 textDisplay.arrowAmount -= 1;
 
                 // Set delay in between shots

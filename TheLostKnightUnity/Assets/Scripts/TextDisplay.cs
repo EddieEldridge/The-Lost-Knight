@@ -10,14 +10,19 @@ public class TextDisplay : MonoBehaviour
     // Variables
     public int coinAmount;
     public int arrowAmount;
-    [SerializeField]
-    public Text coinText;
-    [SerializeField]
-    public Text arrowText;
+    GameObject coinTextGO;
+    GameObject arrowTextGO;
+    Text coinText;
+    Text arrowText;
 
     // Update is called once per frame
     void Start()
     {
+        coinTextGO = GameObject.FindGameObjectWithTag("CoinText");
+        arrowTextGO = GameObject.FindGameObjectWithTag("ArrowText");
+        coinText = coinTextGO.GetComponent<Text>();
+        arrowText = arrowTextGO.GetComponent<Text>();
+
         arrowAmount = 10;
         UpdateArrows();
         UpdateCoins();

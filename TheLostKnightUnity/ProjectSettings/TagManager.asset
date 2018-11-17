@@ -16,6 +16,8 @@ TagManager:
   - SceneTransition
   - DeathMenu
   - StaminaBar
+  - CoinText
+  - ArrowText
   layers:
   - Default
   - TransparentFX

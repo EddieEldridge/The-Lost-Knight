@@ -139,10 +139,10 @@ TextureImporter:
       name: MyTilesetTemplate_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 1325
-        width: 194
-        height: 201
+        x: 58
+        y: 1312
+        width: 216
+        height: 214
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 1}
@@ -179,9 +179,9 @@ TextureImporter:
       name: MyTilesetTemplate_2
       rect:
         serializedVersion: 2
-        x: 489
+        x: 488
         y: 1325
-        width: 213
+        width: 216
         height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -459,12 +459,12 @@ TextureImporter:
       name: MyTilesetTemplate_21
       rect:
         serializedVersion: 2
-        x: 753
-        y: 632
-        width: 217
-        height: 230
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 749
+        y: 669
+        width: 213
+        height: 197
+      alignment: 9
+      pivot: {x: 0.46134695, y: 0.4791275}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -479,10 +479,10 @@ TextureImporter:
       name: MyTilesetTemplate_22
       rect:
         serializedVersion: 2
-        x: 969
-        y: 633
-        width: 212
-        height: 230
+        x: 964
+        y: 651
+        width: 216
+        height: 214
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 1}
