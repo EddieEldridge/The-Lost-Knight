@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     // Variables
+
     Rigidbody2D playerRB;
     Collider2D PlayerCollider;
     TouchMovement touchMovement;
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         // get a reference to the SpriteRenderer component on this gameObject
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myParticleSystem = GetComponent<ParticleSystem>();
+
     }
     // Jumping and checking if the player is grounded or not
     // "Changed 'Platform' to the name of the GameObject you wanna check if ur standing on it or not

@@ -12,6 +12,7 @@ TextureImporter:
     21300014: TLKSpriteSheet_7
     21300016: TLKSpriteSheet_8
     21300018: TLKSpriteSheet_9
+    21300020: TLKSpriteSheet_10
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -119,12 +120,12 @@ TextureImporter:
       name: TLKSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 75
-        y: 791
-        width: 116
-        height: 183
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 57
+        y: 786
+        width: 137
+        height: 200
+      alignment: 9
+      pivot: {x: 0.30531415, y: 0.51645416}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +145,7 @@ TextureImporter:
         width: 121
         height: 189
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,7 +165,7 @@ TextureImporter:
         width: 86
         height: 208
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,7 +185,7 @@ TextureImporter:
         width: 86
         height: 220
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,7 +205,7 @@ TextureImporter:
         width: 123
         height: 193
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,7 +225,7 @@ TextureImporter:
         width: 183
         height: 183
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +245,7 @@ TextureImporter:
         width: 153
         height: 191
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,7 +265,7 @@ TextureImporter:
         width: 86
         height: 215
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -284,7 +285,7 @@ TextureImporter:
         width: 177
         height: 211
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,13 +305,33 @@ TextureImporter:
         width: 262
         height: 183
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: d0d0555242d5d9042a47481814c2cb18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TLKSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 787
+        width: 145
+        height: 200
+      alignment: 9
+      pivot: {x: 0.4761213, y: 0.4933756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18dcd4afb749d30499dbc51709fe0ed9
       vertices: []
       indices: 
       edges: []
