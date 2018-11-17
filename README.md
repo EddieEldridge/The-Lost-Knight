@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/EddieEldridge/The-Lost-Knight/master/img/TheLostKnight.png)
+![](https://raw.githubusercontent.com/EddieEldridge/The-Lost-Knight/master/Documentation/img/TheLostKnight.png)
 
 <p align="center">
   <b>A 2D Action/RPG game developed in Unity for the Android platform</b><br>
