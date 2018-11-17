@@ -1,4 +1,3 @@
-# The-Lost-Knight
 ![](img\TheLostKnight.png)
 
 <p align="center">
@@ -61,3 +60,30 @@ I have managed to successfully add a shop which was part of the design brief for
 
 ## 8th November, 2018
 I have added a splash screen as well as some an options menu with no functionality yet. I have also expanded upon the tutorial design. I am getting close to finishing the first level, I just need to fix some small bugs with movement and add a ranged attack to the Wraith enemy. Then I can start designing and building the levels outlined in the design document.
+
+## 17th November, 2018
+So far, the game has the following features
+
+#### Implemented
+* Movement (Dashing, Jumping, Walking/Running)
+* Health and Stamina system with corresponding bars
+* Ranged and melee attacks
+* Enemies that move patrol and chase the player when the player moves close to them
+* Main menu, pause menu and settings menu with corresponding buttons and functionality
+* Android touch controls
+* Lighting and particle effects
+* Appropriate sprites for all corresponding game objects
+* Music and sound effects for player actions/levels
+* Custom tilemap for level generation
+* One fully complete tutorial
+
+#### To be implemented
+* Animations
+* Three more levels
+* Ranged enemies
+* Saving player information in local storage
+* Social media/online functionality
+* Submission to Play store
+
+There are roughly 2 and a half weeks before the deadline (6th of December). I hope to have the above features implemented by the 31st of November and spend the rest of the time before the deadline bug fixing/polishing the game and preparing it for submission to the Play store.
+
