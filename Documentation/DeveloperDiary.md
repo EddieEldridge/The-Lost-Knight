@@ -76,6 +76,7 @@ So far, the game has the following features
 * Music and sound effects for player actions/levels
 * Custom tilemap for level generation
 * One fully complete tutorial
+* Merchant and gold system
 
 #### To be implemented
 * Animations
