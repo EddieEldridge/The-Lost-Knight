@@ -56,8 +56,8 @@ I've sucessfully added a game background for the tutorial level which I can use 
 ## 5th November, 2018
 Since my last entry in my developer diary I have added quite a few new features. I have redesigned the whole UI to give it more of a cohesive them as well as adding new main menu, music and a pause menu. I've also added dashing and blood particles as well as some lighting effects using soft brushes made in Photoshop. I am very happy with how the game is looking so far. I've also added coins that the player can pick up and spend in shops in the game. I think I will keep the shop simple, instead of changing gameplay i'm thinking it will just offer customiziation options such as color change or weapon change but this probably won't affect gameplay too much. Next I would like to finish the tutorial level design as well as adding the shop. 
 
-# 6th November, 2018
+## 6th November, 2018
 I have managed to successfully add a shop which was part of the design brief for the game. The player can approach a merchant character upon which a prompt to trade will appear. They can then touch the merchant to begin trading. They are then greeted with some options regarding what things they can spend their gold on as well as how much it will cost. I would like to expand on what options are available from the shop but at the moment I just want to focus on completing the game in general.
 
-# 8th November, 2018
+## 8th November, 2018
 I have added a splash screen as well as some an options menu with no functionality yet. I have also expanded upon the tutorial design. I am getting close to finishing the first level, I just need to fix some small bugs with movement and add a ranged attack to the Wraith enemy. Then I can start designing and building the levels outlined in the design document.
