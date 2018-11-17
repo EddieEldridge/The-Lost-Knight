@@ -1,4 +1,4 @@
-![](img\TheLostKnight.png)
+![](https://raw.githubusercontent.com/EddieEldridge/The-Lost-Knight/master/img/TheLostKnight.png)
 
 <p align="center">
   <b>This is a development diary for my Unity project, The Lost Knight. This diary will be used to keep track of development and to outline my thoughts and ideas along the development process.</b><br>
