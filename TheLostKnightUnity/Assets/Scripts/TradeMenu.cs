@@ -19,11 +19,11 @@ public class TradeMenu : MonoBehaviour
     }
     void Update()
     {
-        if(playerAttack==null)
+        if (playerAttack == null)
         {
             playerAttack = FindObjectOfType<PlayerAttack>();
         }
-        if(playerMovement==null)
+        if (playerMovement == null)
         {
             playerMovement = FindObjectOfType<PlayerMovement>();
         }
@@ -69,22 +69,26 @@ public class TradeMenu : MonoBehaviour
         {
             playerHealth.playerHealth = 100f;
             textDisplay.coinAmount -= 5;
+            textDisplay.UpdateCoins();
+
         }
 
     }
 
     public void SpeedBoost()
     {
-        if(textDisplay!=null)
+        if (textDisplay != null)
         {
             Debug.Log("in");
-        if (textDisplay.coinAmount >= 20)
-                {
-                    playerMovement.moveSpeed = playerMovement.moveSpeed * 1.5f;
-                    textDisplay.coinAmount -= 20;
-                }
+            if (textDisplay.coinAmount >= 20)
+            {
+                playerMovement.moveSpeed = playerMovement.moveSpeed * 1.5f;
+                textDisplay.coinAmount -= 20;
+                textDisplay.UpdateCoins();
+
+            }
         }
-     
+
     }
 
     public void DamageBoost()
@@ -93,15 +97,20 @@ public class TradeMenu : MonoBehaviour
         {
             playerAttack.damage += 20;
             textDisplay.coinAmount -= 50;
+            textDisplay.UpdateCoins();
+
         }
     }
 
     public void BuyArrows()
     {
+
         if (textDisplay.coinAmount >= 10)
         {
             textDisplay.arrowAmount += 10;
             textDisplay.coinAmount -= 25;
+            textDisplay.UpdateArrows();
+            textDisplay.UpdateCoins();
         }
 
     }
