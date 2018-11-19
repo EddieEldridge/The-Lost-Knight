@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
@@ -9,38 +10,87 @@ public class SceneManagement : MonoBehaviour
     public GameObject OptionsMenu;
     public GameObject LevelChooser;
 
+    [SerializeField]
+    Image level1Button;
+    [SerializeField]
+    Image level2Button;
+    [SerializeField]
+    Image level3Button;
+    [SerializeField]
+    Image level4Button;
+
+    Color tempColor;
 
     void Start()
     {
         MainMenu.SetActive(true);
         OptionsMenu.SetActive(false);
         LevelChooser.SetActive(false);
-      
+
+        PlayerPrefs.SetInt("weepingClearingUnlocked", 1);
+
+        if (PlayerPrefs.GetInt("weepingClearingUnlocked") != 1)
+        {
+            //level1Button = GameObject.FindGameObjectWithTag("PlayButton1").GetComponent<Image>();
+            tempColor.a = 0.5f;
+            tempColor = level1Button.color;
+            level1Button.color = tempColor;
+        }
+
+        if (PlayerPrefs.GetInt("hallowedCaveUnlocked") != 1)
+        {
+            //level2Button = GameObject.FindGameObjectWithTag("PlayButton2").GetComponent<Image>();
+            tempColor = level2Button.color;
+            tempColor.a = 0.3f;
+            level2Button.color = tempColor;
+        }
+
+        if (PlayerPrefs.GetInt("hallowedCaveUnlocked") != 1)
+        {
+            //level3Button = GameObject.FindGameObjectWithTag("PlayButton3").GetComponent<Image>();
+            tempColor = level3Button.color;
+            tempColor.a = 0.3f;
+            level3Button.color = tempColor;
+
+        }
+
+        if (PlayerPrefs.GetInt("fallenKnightsLairUnlocked") != 1)
+        {
+           // level4Button = GameObject.FindGameObjectWithTag("PlayButton4").GetComponent<Image>();
+            tempColor = level4Button.color;
+            tempColor.a = 0.3f;
+            level4Button.color = tempColor;
+
+        }
     }
 
-    public void StartTutorial()
+    public void StartLevel1()
     {
-	  	SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("CreepingWillow");
     }
 
-       public void StartLevel1()
+    public void StartLevel2()
     {
-		SceneManager.LoadScene("Tutorial");
+        if (PlayerPrefs.GetInt("weepingClearingUnlocked") == 1)
+        {
+            SceneManager.LoadScene("WeepingClearing");
+        }
     }
 
-       public void StartLevel2()
+    public void StartLevel3()
     {
-		SceneManager.LoadScene("Tutorial");
+        if (PlayerPrefs.GetInt("hallowedCaveUnlocked") == 1)
+        {
+            SceneManager.LoadScene("HallowedCave");
+        }
     }
 
-       public void StartLevel3()
+    public void StartLevel4()
     {
-		SceneManager.LoadScene("Tutorial");
-    }
-
-       public void StartLevel4()
-    {
-		SceneManager.LoadScene("Tutorial");
+        if (PlayerPrefs.GetInt("fallenKnightsLairUnlocked") == 1)
+        {
+            SceneManager.LoadScene("FallenKnightsLair");
+        }
     }
 
     public void ChooseLevel()
@@ -65,8 +115,8 @@ public class SceneManagement : MonoBehaviour
 
     public void ExitGame()
     {
-		Application.Quit();    
-  	}
+        Application.Quit();
+    }
 
-   
+
 }

@@ -18,6 +18,10 @@ TagManager:
   - StaminaBar
   - CoinText
   - ArrowText
+  - PlayButton1
+  - PlayButton2
+  - PlayButton3
+  - PlayButton4
   layers:
   - Default
   - TransparentFX
