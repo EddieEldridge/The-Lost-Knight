@@ -108,6 +108,7 @@ public class TouchMovement : MonoBehaviour
     {
         if (player != null)
         {
+            animator.SetBool("isJumping", false);
             player.jump = false;
         }
     }

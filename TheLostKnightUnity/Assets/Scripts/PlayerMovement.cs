@@ -34,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
     Image staminaBarImage;
     public float staminaRegenRate;
 
+    Animator animator;
+
+    GameObject playerPrefab;
+
     // variable to hold a reference to our SpriteRenderer component
     private SpriteRenderer mySpriteRenderer;
     private ParticleSystem myParticleSystem;
@@ -44,7 +48,8 @@ public class PlayerMovement : MonoBehaviour
         // get a reference to the SpriteRenderer component on this gameObject
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myParticleSystem = GetComponent<ParticleSystem>();
-
+         playerPrefab = GameObject.FindGameObjectWithTag("Player");
+        animator = playerPrefab.GetComponent<Animator>();
     }
     // Jumping and checking if the player is grounded or not
     // "Changed 'Platform' to the name of the GameObject you wanna check if ur standing on it or not
@@ -60,7 +65,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (theCollision.gameObject.name == "Platform")
         {
+            animator.SetBool("isJumping", true);
             isGrounded = false;
+        }
+    }
+
+    void Update()
+    {
+        if(isGrounded==true)
+        {
+            animator.SetBool("isJumping", false);
+        }
+        else
+        {
+                        animator.SetBool("isJumping", true);
         }
     }
 

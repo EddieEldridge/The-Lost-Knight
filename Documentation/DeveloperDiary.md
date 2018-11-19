@@ -88,3 +88,6 @@ So far, the game has the following features
 
 There are roughly 2 and a half weeks before the deadline (6th of December). I hope to have the above features implemented by the 31st of November and spend the rest of the time before the deadline bug fixing/polishing the game and preparing it for submission to the Play store.
 
+## 19th November, 2018
+I have successfully added walking and idle animations for the player character and I am happy with them. I am also saving the player's gold amount in local storage so when they open up the game after closing it they will have the same gold. This also means gold will carry into the next level where the merchant will have more expensive upgrades.
+
