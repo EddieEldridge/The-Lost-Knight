@@ -23,12 +23,10 @@ public class ItemCount : MonoBehaviour
         if (collidingWith.CompareTag("Player"))
         {
             coinFX.Play();
+
             if (textDisplay != null)
             {
                 textDisplay.UpdateCoins();
-                Debug.Log("coin++");
-                textDisplay.coinAmount++;
-                Debug.Log("Coin amount: " + textDisplay.coinAmount++);
             }
             Destroy(gameObject, coinFXClip.length);
         }

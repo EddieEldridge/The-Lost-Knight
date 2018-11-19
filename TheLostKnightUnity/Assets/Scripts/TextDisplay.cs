@@ -8,16 +8,19 @@ public class TextDisplay : MonoBehaviour
 {
 
     // Variables
-    public int coinAmount;
     public int arrowAmount;
+    public int prefsCoinAmount;
     GameObject coinTextGO;
     GameObject arrowTextGO;
+    ItemCount itemCount;
     Text coinText;
     Text arrowText;
 
     // Update is called once per frame
     void Start()
     {
+        prefsCoinAmount = PlayerPrefs.GetInt("coinAmount");
+
         coinTextGO = GameObject.FindGameObjectWithTag("CoinText");
         arrowTextGO = GameObject.FindGameObjectWithTag("ArrowText");
         coinText = coinTextGO.GetComponent<Text>();
@@ -30,9 +33,12 @@ public class TextDisplay : MonoBehaviour
 
     public void UpdateCoins()
     {
+        prefsCoinAmount++;
+        PlayerPrefs.SetInt("coinAmount", prefsCoinAmount);
+
         if (coinText.text != null)
         {
-            coinText.text = "" + coinAmount;
+            coinText.text = "" + prefsCoinAmount;
         }
         else
         {
