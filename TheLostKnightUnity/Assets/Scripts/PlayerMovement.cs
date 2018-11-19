@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Collider2D PlayerCollider;
     TouchMovement touchMovement;
 
+    public bool isWalking;
     public bool moveRight;
     public bool moveLeft;
     public bool jump;
@@ -101,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
                 // Moving left
                 if (moveLeft == true || Input.GetKeyDown(KeyCode.A))
                 {
+                    isWalking=true;
                     direction = 1;
                     playerRB.velocity = new Vector2(-moveSpeed, playerRB.velocity.y);
                     // flip the sprite
@@ -110,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
                 // Moving right
                 if (moveRight == true || Input.GetKeyDown(KeyCode.D))
                 {
+                    isWalking=true;
                     direction = 2;
                     playerRB.velocity = new Vector2(moveSpeed, playerRB.velocity.y);
                     // flip the sprite
@@ -123,7 +126,6 @@ public class PlayerMovement : MonoBehaviour
                     playerRB.AddForce((Vector2.up) * jumpForce * ((fallMultiplier - 1) * Time.deltaTime));
                     isGrounded = false;
                 }
-
 
                 // Dashing
                 // Android touch movement
@@ -151,6 +153,8 @@ public class PlayerMovement : MonoBehaviour
                     }
 
                 }
+
+               
 
 
 

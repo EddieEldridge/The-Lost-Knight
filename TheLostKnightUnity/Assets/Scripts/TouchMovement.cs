@@ -10,12 +10,17 @@ public class TouchMovement : MonoBehaviour
     private TradeMenu tradeMenu;
     public int rightTouchCount = 0;
     public int leftTouchCount = 0;
+    GameObject playerPrefab;
 
     private bool keepGoing = true;
     public float timer;
 
+    Animator animator;
+
     void Start()
     {
+        playerPrefab = GameObject.FindGameObjectWithTag("Player");
+        animator = playerPrefab.GetComponent<Animator>();
     }
 
     void Update()
@@ -56,6 +61,7 @@ public class TouchMovement : MonoBehaviour
         {
             player.moveRight = false;
             player.moveLeft = true;
+            animator.SetBool("isWalking", true);
             leftTouchCount++;
         }
 
@@ -67,6 +73,7 @@ public class TouchMovement : MonoBehaviour
         {
             player.moveRight = true;
             player.moveLeft = false;
+            animator.SetBool("isWalking", true);
             rightTouchCount++;
         }
     }
@@ -75,6 +82,7 @@ public class TouchMovement : MonoBehaviour
     {
         if (player != null)
         {
+            animator.SetBool("isWalking", false);
             player.moveLeft = false;
         }
     }
@@ -83,6 +91,7 @@ public class TouchMovement : MonoBehaviour
     {
         if (player != null)
         {
+            animator.SetBool("isWalking", false);
             player.moveRight = false;
         }
     }

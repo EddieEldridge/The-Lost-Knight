@@ -201,6 +201,10 @@ MonoBehaviour:
   MainMenu: {fileID: 420665244}
   OptionsMenu: {fileID: 100117318}
   LevelChooser: {fileID: 590124150}
+  level1Button: {fileID: 0}
+  level2Button: {fileID: 0}
+  level3Button: {fileID: 0}
+  level4Button: {fileID: 0}
 --- !u!1 &139703703
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +561,10 @@ MonoBehaviour:
   MainMenu: {fileID: 420665244}
   OptionsMenu: {fileID: 100117318}
   LevelChooser: {fileID: 590124150}
+  level1Button: {fileID: 697809005}
+  level2Button: {fileID: 443730733}
+  level3Button: {fileID: 1582708790}
+  level4Button: {fileID: 1648663810}
 --- !u!114 &420665247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,7 +632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: 88}
+  m_AnchoredPosition: {x: 29, y: 86.6}
   m_SizeDelta: {x: 691.75, y: 183.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443730732
@@ -667,7 +675,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1346878880}
-        m_MethodName: ReturnToMenu
+        m_MethodName: StartLevel2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -891,6 +899,10 @@ MonoBehaviour:
   MainMenu: {fileID: 420665244}
   OptionsMenu: {fileID: 590124150}
   LevelChooser: {fileID: 590124150}
+  level1Button: {fileID: 697809005}
+  level2Button: {fileID: 443730733}
+  level3Button: {fileID: 1582708790}
+  level4Button: {fileID: 1648663810}
 --- !u!114 &590124153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,7 +1092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -703, y: 88}
+  m_AnchoredPosition: {x: -753, y: 86.6}
   m_SizeDelta: {x: 691.75, y: 183.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697809004
@@ -1123,7 +1135,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1346878880}
-        m_MethodName: ReturnToMenu
+        m_MethodName: StartLevel1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1380,6 +1392,10 @@ MonoBehaviour:
   MainMenu: {fileID: 420665244}
   OptionsMenu: {fileID: 100117318}
   LevelChooser: {fileID: 590124150}
+  level1Button: {fileID: 697809005}
+  level2Button: {fileID: 443730733}
+  level3Button: {fileID: 1582708790}
+  level4Button: {fileID: 1648663810}
 --- !u!224 &1346878881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1509,6 +1525,10 @@ MonoBehaviour:
   MainMenu: {fileID: 420665244}
   OptionsMenu: {fileID: 100117318}
   LevelChooser: {fileID: 590124150}
+  level1Button: {fileID: 697809005}
+  level2Button: {fileID: 443730733}
+  level3Button: {fileID: 1582708790}
+  level4Button: {fileID: 1648663810}
 --- !u!1 &1582708787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,7 +1562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 832, y: 86}
+  m_AnchoredPosition: {x: 802, y: 85}
   m_SizeDelta: {x: 691.75, y: 183.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582708789
@@ -1585,7 +1605,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1346878880}
-        m_MethodName: ReturnToMenu
+        m_MethodName: StartLevel3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1773,7 +1793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 66, y: -183}
+  m_AnchoredPosition: {x: 29, y: -183}
   m_SizeDelta: {x: 1080.1, y: 266.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1648663809
@@ -1816,7 +1836,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1346878880}
-        m_MethodName: ReturnToMenu
+        m_MethodName: StartLevel4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
