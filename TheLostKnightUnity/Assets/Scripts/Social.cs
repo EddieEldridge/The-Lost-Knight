@@ -47,20 +47,20 @@ public class Social : MonoBehaviour
  
     public void FacebookShare()
     {
-        FB.ShareLink(new System.Uri("https://resocoder.com"), "Check it out!",
-            "Good programming tutorials lol!",
-            new System.Uri("https://resocoder.com/wp-content/uploads/2017/01/logoRound512.png"));
+        FB.ShareLink(new System.Uri("https://play.google.com/store/apps/details?id=com.EddiEldridge.TheLostKnightAndroid"), "Check it out!",
+            "Check out this awesome game!",
+            new System.Uri("https://raw.githubusercontent.com/EddieEldridge/The-Lost-Knight/master/Documentation/img/TheLostKnight.png"));
     }
  
     #region Inviting
     public void FacebookGameRequest()
     {
-        FB.AppRequest("Hey! Come and play this awesome game!", title: "The Lost Knight");
+        FB.AppRequest("Hey! Come and play this awesome game! https://play.google.com/store/apps/details?id=com.EddiEldridge.TheLostKnightAndroid", title: "The Lost Knight");
     }
  
     public void FacebookInvite()
     {
-        FB.Mobile.AppInvite(new System.Uri("https://play.google.com/store/apps/details?id=com.tappybyte.byteaway"));
+        FB.Mobile.AppInvite(new System.Uri("https://play.google.com/store/apps/details?id=com.EddiEldridge.TheLostKnightAndroid"));
     }
     #endregion
  
