@@ -135,7 +135,7 @@ public class TouchMovement : MonoBehaviour
         if (playerAttacking != null)
         {
             playerAttacking.isAttacking = true;
-
+            animator.SetBool("isAttacking", true);
         }
     }
 
@@ -144,7 +144,7 @@ public class TouchMovement : MonoBehaviour
         if (playerAttacking != null)
         {
             playerAttacking.isAttacking = false;
-
+            animator.SetBool("isAttacking", false);
         }
     }
 

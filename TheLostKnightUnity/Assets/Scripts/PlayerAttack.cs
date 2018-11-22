@@ -68,7 +68,6 @@ public class PlayerAttack : MonoBehaviour
             if (isAttacking == true)
             {
                 Handheld.Vibrate();
-                animator.SetBool("isAttacking", true);
                 timeBetweenAttack = startTimeBetweenAttack;
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
 

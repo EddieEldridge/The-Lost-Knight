@@ -50,6 +50,7 @@ public class SplashFade : MonoBehaviour
             FadeOut();
 
             yield return new WaitForSeconds(2.5f);
+            splashImage.enabled = false;
         }
     }
 
