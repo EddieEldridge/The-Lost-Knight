@@ -9,6 +9,7 @@ public class SceneManagement : MonoBehaviour
     public GameObject MainMenu;
     public GameObject OptionsMenu;
     public GameObject LevelChooser;
+    public GameObject SocialMenu;
 
     [SerializeField]
     Image level1Button;
@@ -24,6 +25,7 @@ public class SceneManagement : MonoBehaviour
     void Start()
     {
         MainMenu.SetActive(true);
+        SocialMenu.SetActive(false);
         OptionsMenu.SetActive(false);
         LevelChooser.SetActive(false);
 
@@ -110,12 +112,21 @@ public class SceneManagement : MonoBehaviour
     {
         MainMenu.SetActive(true);
         OptionsMenu.SetActive(false);
+        SocialMenu.SetActive(false);
         LevelChooser.SetActive(false);
     }
 
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void OpenSocialMenu()
+    {
+        MainMenu.SetActive(false);
+        OptionsMenu.SetActive(false);
+        LevelChooser.SetActive(false);
+        SocialMenu.SetActive(true);
     }
 
 
