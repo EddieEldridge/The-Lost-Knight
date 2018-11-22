@@ -91,3 +91,5 @@ There are roughly 2 and a half weeks before the deadline (6th of December). I ho
 ## 19th November, 2018
 I have successfully added walking and idle animations for the player character and I am happy with them. I am also saving the player's gold amount in local storage so when they open up the game after closing it they will have the same gold. This also means gold will carry into the next level where the merchant will have more expensive upgrades.
 
+## 22nd November, 2018
+I've updated the build to version 0.7. This new build includes some social media integration with Facebook. The player can now login and logout with Facebook, invite friends to play the game and share the game with other Facebook friends. I've also uploaded the game to the Play Store and hopefully it will be available soon. The game isn't 100 percent finished but I want to get it on the Play Store now rather than later as a lot of the Facebook social integration requires a Play Store link to work properly. I still have to add some attacking, dashing and jumping animations as well as make some more levels. 
