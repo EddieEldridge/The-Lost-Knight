@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreepingWillow.unity
     guid: 7cb6188c46bb24b43973de0ef6b3d70a
+  - enabled: 1
+    path: Assets/Scenes/WeepingClearing.unity
+    guid: 7c78570989dc70c4880e47dd671f3633
   m_configObjects: {}
