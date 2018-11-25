@@ -93,3 +93,11 @@ I have successfully added walking and idle animations for the player character a
 
 ## 22nd November, 2018
 I've updated the build to version 0.7. This new build includes some social media integration with Facebook. The player can now login and logout with Facebook, invite friends to play the game and share the game with other Facebook friends. I've also uploaded the game to the Play Store and hopefully it will be available soon. The game isn't 100 percent finished but I want to get it on the Play Store now rather than later as a lot of the Facebook social integration requires a Play Store link to work properly. I still have to add some attacking, dashing and jumping animations as well as make some more levels. 
+
+## 25 November, 2018
+Today, i've added a second level to the game as well as updating the game on the Play store. I've done some beta testing by giving the game out to some friends through the Play store link and I have been told that there are several bugs in the game such as 
+
+* Sometimes the player gets stuck jumping and can't get out of this state 
+* Death sequence sometimes doesn't trigger properly
+* Gold/Items not updating properly at the merchant
+* Not enough levels

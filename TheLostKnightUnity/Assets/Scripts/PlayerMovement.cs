@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     float staminaPercentage;
     Image staminaBarImage;
     public float staminaRegenRate;
+    float distToGround;
 
     Animator animator;
 
@@ -164,7 +165,6 @@ public class PlayerMovement : MonoBehaviour
                     else
                     {
                         animator.SetBool("isDashing", false);
-
                     }
 
                     // Android touch movement
