@@ -118,6 +118,7 @@ public class TouchMovement : MonoBehaviour
         if (playerAttacking != null)
         {
             playerAttacking.isFiring = true;
+                            animator.SetBool("isRangedAttacking", true);
         }
     }
 
@@ -126,6 +127,8 @@ public class TouchMovement : MonoBehaviour
         if (playerAttacking != null)
         {
             playerAttacking.isFiring = false;
+                                        animator.SetBool("isRangedAttacking", false);
+
 
         }
     }

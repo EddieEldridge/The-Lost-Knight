@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         // get a reference to the SpriteRenderer component on this gameObject
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myParticleSystem = GetComponent<ParticleSystem>();
-         playerPrefab = GameObject.FindGameObjectWithTag("Player");
+        playerPrefab = GameObject.FindGameObjectWithTag("Player");
         animator = playerPrefab.GetComponent<Animator>();
     }
     // Jumping and checking if the player is grounded or not
@@ -72,13 +72,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(isGrounded==true)
+        if (isGrounded == true)
         {
             animator.SetBool("isJumping", false);
         }
         else
         {
-                        animator.SetBool("isJumping", true);
+            animator.SetBool("isJumping", true);
         }
     }
 
@@ -120,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
                 // Moving left
                 if (moveLeft == true || Input.GetKeyDown(KeyCode.A))
                 {
-                    isWalking=true;
+                    isWalking = true;
                     direction = 1;
                     playerRB.velocity = new Vector2(-moveSpeed, playerRB.velocity.y);
                     // flip the sprite
@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
                 // Moving right
                 if (moveRight == true || Input.GetKeyDown(KeyCode.D))
                 {
-                    isWalking=true;
+                    isWalking = true;
                     direction = 2;
                     playerRB.velocity = new Vector2(moveSpeed, playerRB.velocity.y);
                     // flip the sprite
@@ -156,23 +156,35 @@ public class PlayerMovement : MonoBehaviour
                     if (direction == 1 && touchMovement.leftTouchCount >= 2 && playerStamina > 25)
                     {
                         myParticleSystem.Play();
+                        animator.SetBool("isDashing", true);
                         playerRB.velocity = Vector2.left * dashForce * dashMultiplier * Time.deltaTime;
                         playerStamina -= 10;
                         //playerRB.AddForce((Vector2.right) * dashSpeed  * Time.deltaTime);
+                    }
+                    else
+                    {
+                        animator.SetBool("isDashing", false);
+
                     }
 
                     // Android touch movement
                     if (direction == 2 && touchMovement.rightTouchCount >= 2 && playerStamina > 25)
                     {
                         myParticleSystem.Play();
+                        animator.SetBool("isDashing", true);
                         //playerRB.AddForce((Vector2.left) * dashSpeed * Time.deltaTime);
                         playerStamina -= 10;
                         playerRB.velocity = Vector2.right * dashForce * dashMultiplier * Time.deltaTime;
                     }
+                    else
+                    {
+                        animator.SetBool("isDashing", false);
+
+                    }
 
                 }
 
-               
+
 
 
 
