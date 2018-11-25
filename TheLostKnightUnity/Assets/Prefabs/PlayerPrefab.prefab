@@ -29,6 +29,8 @@ GameObject:
   - component: {fileID: 198796564909818536}
   - component: {fileID: 199538701458393198}
   - component: {fileID: 61164200635003048}
+  - component: {fileID: 122918300352946480}
+  - component: {fileID: 95918657223394720}
   m_Layer: 8
   m_Name: PlayerPrefab
   m_TagString: Player
@@ -58,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1330321111541362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 548.36426, y: -80.3468, z: 0}
+  m_LocalPosition: {x: 564.8, y: -80.8, z: 0}
   m_LocalScale: {x: 6.7287874, y: 6.405902, z: 1}
   m_Children:
   - {fileID: 4974751873083158}
@@ -91,8 +93,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 1
-  m_AngularDrag: 0.05
-  m_GravityScale: 30
+  m_AngularDrag: 0
+  m_GravityScale: 20
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -123,6 +125,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0802586, y: 2.0621004}
   m_EdgeRadius: 0
+--- !u!95 &95918657223394720
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330321111541362}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0e5796464eb6f24c990404a0f88169a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114254105578950700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,18 +154,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b311ea2508cfd40a7715d18c7ab9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWalking: 0
   moveRight: 0
   moveLeft: 0
   jump: 0
-  moveSpeed: 50
-  jumpForce: 50000
+  moveSpeed: 40
+  jumpForce: 70000
   lowJumpMultiplier: 1
-  fallMultiplier: 4
+  fallMultiplier: 3
   isGrounded: 1
-  dashSpeed: 200
-  dashTime: 0.432851
-  startDashTime: 0.5
+  dashForce: 300
+  dashMultiplier: 20
   direction: 0
+  playerMaxStamina: 300
+  playerStamina: 0
+  staminaRegenRate: 30
 --- !u!114 &114292162598893050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMaxHealth: 100
   playerHealth: 100
-  deathDisplay: {fileID: 0}
+  UI: {fileID: 0}
 --- !u!114 &114870104860288268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,6 +232,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3dc6059ec8557549b43bebef9088075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!122 &122918300352946480
+Halo:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330321111541362}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278649100
+  m_Size: 4.98
 --- !u!198 &198796564909818536
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4891,14 +4925,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d00e87ec8e35a0c47bddea675e7a9b77, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2afc1786334ab114aa02dc21c33f2d2e, type: 3}
   m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.25, y: 2.25}
+  m_Size: {x: 1.7, y: 2.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
