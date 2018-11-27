@@ -11,14 +11,12 @@ public class TradeMenu : MonoBehaviour
     private PlayerHealth playerHealth;
     private PlayerAttack playerAttack;
     private PlayerMovement playerMovement;
-    public int prefsCoinAmount;
-
 
     void Start()
     {
-        prefsCoinAmount=PlayerPrefs.GetInt("coinAmount");
         TradeMenuUI.SetActive(false);
     }
+    
     void Update()
     {
         if (playerAttack == null)
@@ -67,13 +65,12 @@ public class TradeMenu : MonoBehaviour
 
     public void RestoreHealth()
     {
-        if (prefsCoinAmount >= 5)
+        if (TextDisplay.coinAmount >= 5)
         {
             playerHealth.playerHealth = 100f;
-            prefsCoinAmount -= 5;
-            PlayerPrefs.SetInt("coinAmount", prefsCoinAmount);
+            TextDisplay.coinAmount -= 5;
+            PlayerPrefs.SetInt("coinAmount", TextDisplay.coinAmount);
             textDisplay.UpdateCoins();
-
         }
 
     }
@@ -83,11 +80,11 @@ public class TradeMenu : MonoBehaviour
         if (textDisplay != null)
         {
             Debug.Log("in");
-            if (prefsCoinAmount >= 20)
+            if (TextDisplay.coinAmount >= 20)
             {
                 playerMovement.moveSpeed = playerMovement.moveSpeed * 1.5f;
-                prefsCoinAmount -= 20;
-                PlayerPrefs.SetInt("coinAmount", prefsCoinAmount);
+                TextDisplay.coinAmount -= 20;
+                PlayerPrefs.SetInt("coinAmount", TextDisplay.coinAmount);
                 textDisplay.UpdateCoins();
 
             }
@@ -97,24 +94,23 @@ public class TradeMenu : MonoBehaviour
 
     public void DamageBoost()
     {
-        if (prefsCoinAmount >= 50)
+        if (TextDisplay.coinAmount >= 50)
         {
             playerAttack.damage += 20;
-            prefsCoinAmount -= 50;
-            PlayerPrefs.SetInt("coinAmount", prefsCoinAmount);
+            TextDisplay.coinAmount -= 50;
+            PlayerPrefs.SetInt("coinAmount", TextDisplay.coinAmount);
             textDisplay.UpdateCoins();
-
         }
     }
 
     public void BuyArrows()
     {
 
-        if (prefsCoinAmount >= 10)
+        if (TextDisplay.coinAmount >= 10)
         {
             textDisplay.arrowAmount += 10;
-            prefsCoinAmount -= 25;
-            PlayerPrefs.SetInt("coinAmount", prefsCoinAmount);
+            TextDisplay.coinAmount -= 25;
+            PlayerPrefs.SetInt("coinAmount", TextDisplay.coinAmount);
             textDisplay.UpdateArrows();
             textDisplay.UpdateCoins();
         }

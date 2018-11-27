@@ -101,3 +101,7 @@ Today, i've added a second level to the game as well as updating the game on the
 * Death sequence sometimes doesn't trigger properly
 * Gold/Items not updating properly at the merchant
 * Not enough levels
+* Slimes don't die properly
+* Arrows not showing a hit 
+
+I need to fix these problems as they are quite bad.
