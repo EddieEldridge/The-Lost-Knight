@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     Collider2D PlayerCollider;
     TouchMovement touchMovement;
 
+    public LayerMask groundLayer;
+
     public bool isWalking;
     public bool moveRight;
     public bool moveLeft;
@@ -21,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float lowJumpMultiplier = 2.5f;
     public float fallMultiplier = 2f;
-    public bool isGrounded;
 
 
     public float dashForce;
@@ -52,35 +53,19 @@ public class PlayerMovement : MonoBehaviour
         playerPrefab = GameObject.FindGameObjectWithTag("Player");
         animator = playerPrefab.GetComponent<Animator>();
     }
-    // Jumping and checking if the player is grounded or not
-    // "Changed 'Platform' to the name of the GameObject you wanna check if ur standing on it or not
-    void OnCollisionEnter2D(Collision2D theCollision)
-    {
-        if (theCollision.gameObject.name == "Platform")
-        {
-            isGrounded = true;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D theCollision)
-    {
-        if (theCollision.gameObject.name == "Platform")
-        {
-            animator.SetBool("isJumping", true);
-            isGrounded = false;
-        }
-    }
 
     void Update()
     {
-        if (isGrounded == true)
+        IsGrounded();
+        if (IsGrounded() == true)
         {
             animator.SetBool("isJumping", false);
         }
-        else
+        if (IsGrounded() == false)
         {
             animator.SetBool("isJumping", true);
         }
+
     }
 
     void Start()
@@ -139,11 +124,20 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 // Jumping
-                if ((jump == true || Input.GetKeyDown(KeyCode.Space)) && isGrounded == true)
+                if ((jump == true || Input.GetKeyDown(KeyCode.Space)))
                 {
-                    playerStamina -= 10;
-                    playerRB.AddForce((Vector2.up) * jumpForce * ((fallMultiplier - 1) * Time.deltaTime));
-                    isGrounded = false;
+                    if (IsGrounded()==true)
+                    {
+                        playerStamina -= 10;
+                        animator.SetBool("isJumping", true);
+                        playerRB.AddForce((Vector2.up) * jumpForce * ((fallMultiplier - 1) * Time.deltaTime));
+                    }
+                    else
+                    { 
+                        animator.SetBool("isJumping", false);
+                        return; 
+                    }
+
                 }
 
                 // Dashing
@@ -179,28 +173,32 @@ public class PlayerMovement : MonoBehaviour
                     else
                     {
                         animator.SetBool("isDashing", false);
-
                     }
 
                 }
 
-
-
-
-
-
-
-
             }
 
+        }
+    }
 
+    bool IsGrounded()
+    {
+        Vector2 position = transform.position;
+        Vector2 direction = Vector2.down;
 
+        float distance = 8.0f;
 
+        Debug.DrawRay(position, direction, Color.red);
+        RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, groundLayer);
 
+        if (hit.collider != null)
+        {
+            Debug.Log("true");
+            return true;
         }
 
-
-
+        return false;
     }
 
     // Restricts the player to camera view
