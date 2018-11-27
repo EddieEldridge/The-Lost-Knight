@@ -22,7 +22,7 @@ public class CollisionDamage : MonoBehaviour
     private EnemyHealth enemyHealth;
     private CameraShake cameraShake;
 
-    private ParticleSystem particleSystem;
+    ParticleSystem particleSystem;
 
     void Awake()
     {

@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1708652663948400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.16, y: -0.16, z: 0}
+  m_LocalPosition: {x: 1.462, y: 0.344, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4343614955702402}
@@ -154,19 +154,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b311ea2508cfd40a7715d18c7ab9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
   isWalking: 0
   moveRight: 0
   moveLeft: 0
   jump: 0
   moveSpeed: 40
-  jumpForce: 70000
+  jumpForce: 30000
   lowJumpMultiplier: 1
   fallMultiplier: 3
-  isGrounded: 1
   dashForce: 300
   dashMultiplier: 20
   direction: 0
-  playerMaxStamina: 300
+  playerMaxStamina: 500
   playerStamina: 0
   staminaRegenRate: 30
 --- !u!114 &114292162598893050
@@ -198,6 +200,7 @@ MonoBehaviour:
   playerMaxHealth: 100
   playerHealth: 100
   UI: {fileID: 0}
+  deathText: {fileID: 0}
 --- !u!114 &114870104860288268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,7 +217,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 512
-  attackRange: 3.85
+  attackRange: 6.14
   damage: 20
   isAttacking: 0
   arrowPrefab: {fileID: 1895527894823918, guid: c5f09e76d33614049bdb13a14b653b14,

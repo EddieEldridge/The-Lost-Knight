@@ -97,9 +97,14 @@ I've updated the build to version 0.7. This new build includes some social media
 ## 25 November, 2018
 Today, i've added a second level to the game as well as updating the game on the Play store. I've done some beta testing by giving the game out to some friends through the Play store link and I have been told that there are several bugs in the game such as 
 
-* Sometimes the player gets stuck jumping and can't get out of this state 
+<strike>
+
+* Sometimes the player gets stuck jumping and can't get out of this state
 * Death sequence sometimes doesn't trigger properly
 * Gold/Items not updating properly at the merchant
+
+</strike>
+
 * Not enough levels
 * Slimes don't die properly
 * Arrows not showing a hit 

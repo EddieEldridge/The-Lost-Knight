@@ -194,7 +194,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (hit.collider != null)
         {
-            Debug.Log("true");
             return true;
         }
 
