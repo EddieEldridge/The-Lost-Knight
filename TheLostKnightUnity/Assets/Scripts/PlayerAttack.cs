@@ -52,7 +52,6 @@ public class PlayerAttack : MonoBehaviour
                 textDisplay.UpdateArrows();
                 textDisplay.arrowAmount -= 1;
 
-
                 // Set delay in between shots
                 cooldownTimer = fireDelay;
 

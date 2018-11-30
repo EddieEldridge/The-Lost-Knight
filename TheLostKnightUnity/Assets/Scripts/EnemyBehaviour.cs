@@ -69,6 +69,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (playerTransform != null)
         {
+            moveSpeed+=10;
             isChasing = true;
             transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
         }

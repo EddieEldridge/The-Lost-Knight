@@ -34,76 +34,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1700661937823174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4368307501984784}
-  m_Layer: 0
-  m_Name: MoveSpot (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1976180796382540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4094924711935596}
-  m_Layer: 0
-  m_Name: MoveSpot
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4094924711935596
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1976180796382540}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.485778, y: -0.7236682, z: 0.030966628}
-  m_LocalScale: {x: 0.60491323, y: 0.60305697, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4156368427228864}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4156368427228864
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576233333379856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1522.8439, y: -81.73388, z: 0}
-  m_LocalScale: {x: 1.6531296, y: 1.658218, z: 1}
-  m_Children:
-  - {fileID: 4094924711935596}
-  - {fileID: 4368307501984784}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1436, y: -76.3, z: 0}
+  m_LocalScale: {x: 7.406021, y: 7.412234, z: 1}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4368307501984784
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1700661937823174}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.619968, y: -0.60305697, z: 0.030966628}
-  m_LocalScale: {x: 0.60491323, y: 0.60305697, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4156368427228864}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50405914363807242
 Rigidbody2D:
@@ -137,18 +79,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11285257, y: 0.85347235}
+  m_Offset: {x: -0.04712975, y: -0.015719056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.84, y: 11.84}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 2.25, y: 2.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.3008633, y: 4.9346113}
+  m_Size: {x: 1.7770875, y: 2.2216408}
   m_EdgeRadius: 0
 --- !u!114 &114347150864218548
 MonoBehaviour:
@@ -176,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c16fe05fe35904bab0e2153b939d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMaxHealth: 50
-  enemyHealth: 50
+  enemyMaxHealth: 100
+  enemyHealth: 100
 --- !u!114 &114732166683844060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,14 +131,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceccdbfe65edc734591736a7ede4496c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 6
   startWaitTime: 3
   moveSpots:
-  - {fileID: 4094924711935596}
-  - {fileID: 4368307501984784}
-  aggroRange: 0
-  exclamationPoint: {fileID: 0}
-  enemy: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  aggroRange: 3
+  exclamationPoint: {fileID: 1436475007253840, guid: 51330634efa594240955d23ee8a54e35,
+    type: 2}
+  enemy: {fileID: 1576233333379856}
   isPatrolling: 1
   isChasing: 0
 --- !u!198 &198099812743455742
@@ -4881,7 +4824,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d0f78e0bd38911d45a5b39a860884ea9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 232f1a0499ea8994cb8e0ce66732fc39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
