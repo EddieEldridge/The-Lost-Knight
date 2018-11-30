@@ -102,11 +102,13 @@ Today, i've added a second level to the game as well as updating the game on the
 * Sometimes the player gets stuck jumping and can't get out of this state
 * Death sequence sometimes doesn't trigger properly
 * Gold/Items not updating properly at the merchant
-
-</strike>
-
 * Not enough levels
 * Slimes don't die properly
 * Arrows not showing a hit 
 
 I need to fix these problems as they are quite bad.
+
+</strike> 
+
+## 30th November, 2018
+I've fixed all the bugs present above and also added a new level in called the Hallowed Cave. I'm pretty much done at this stage, I just need one more level, the boss level and the game is finished. I also need to update the build on the Play Store as it contains a lot of the bugs listed above.
