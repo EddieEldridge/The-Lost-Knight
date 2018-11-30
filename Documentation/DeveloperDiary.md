@@ -111,4 +111,34 @@ I need to fix these problems as they are quite bad.
 </strike> 
 
 ## 30th November, 2018
-I've fixed all the bugs present above and also added a new level in called the Hallowed Cave. I'm pretty much done at this stage, I just need one more level, the boss level and the game is finished. I also need to update the build on the Play Store as it contains a lot of the bugs listed above.
+I've fixed all the bugs present above and also added a new level in called the Hallowed Cave. I'm pretty much done at this stage, I just need one more level, the boss level and the game is finished. I also need to update the build on the Play Store as it contains a lot of the bugs listed above. 
+
+# Testing
+Below are some details of how I tested my game
+
+### Unit Testing
+I have played each level through thoroughly and tested a lot of scenarios to ensure that everything was working correctly for each level.
+
+### Integration Testing
+I then played the game from start to finish, to ensure that every level worked correctly when playing the game from start to finish in one sitting. This was to ensure that no variables were being distorted between levels or any weird behaviour was occurring.
+
+### Beta Testing
+I published the game on the app store and sent out the link to some of my friends who kindly tested the game and reported back any of the bugs they found. They found the following bugs
+
+* Sometimes the player gets stuck jumping and can't get out of this state
+* Death sequence sometimes doesn't trigger properly
+* Gold/Items not updating properly at the merchant
+* Not enough levels
+* Slimes don't die properly
+* Arrows not showing a hit 
+
+I was able to pretty much fix all of these but it was important that I did the beta testing as I wouldn't have found out that the bugs existed otherwise.
+
+### System Testing
+I deployed the game to my Android phone and tested it to make sure there no problems when running on the target platform. I had a small issue with images not being displayed properly on my Android device and I realized quickly it was due to them not having an image component but just a sprite renderer. Apart from that everything worked surprisingly well.
+
+### Acceptance Testing
+I sent the designer of the game, Donal Burke, a link to the app and he tested the game and said he was happy with it and that were no changes he would like to make to the game.
+
+### End
+As the designer was happy with the product, I ended my testing.
