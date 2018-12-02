@@ -21,7 +21,7 @@ public class CollisionDamage : MonoBehaviour
     private PlayerHealth playerHealth;
     private EnemyHealth enemyHealth;
     private CameraShake cameraShake;
-
+    GameObject enemyObject;
     ParticleSystem particleSystem;
 
     void Awake()
@@ -34,6 +34,7 @@ public class CollisionDamage : MonoBehaviour
         playerHealth = FindObjectOfType<PlayerHealth>();
         enemyHealth = FindObjectOfType<EnemyHealth>();
         cameraShake = FindObjectOfType<CameraShake>();
+        enemyObject = enemyHealth.GetComponent<GameObject>();
 
         correctLayer = gameObject.layer;
 
@@ -56,25 +57,33 @@ public class CollisionDamage : MonoBehaviour
         if (collidingWith.CompareTag("Enemy"))
         {
             Handheld.Vibrate();
+            particleSystem.Play();
             StartCoroutine(Flash());
             enemyHealth.enemyHealth -= damageDealt;
-            Debug.Log("Damage Dealt to Enemy: " + damageDealt);
         }
 
         if (collidingWith.CompareTag("Player"))
         {
+            Handheld.Vibrate();
             StartCoroutine(Flash());
             playerHealth.playerHealth -= damageDealt;
-            Debug.Log("Damage Dealt to Player: " + damageDealt);
         }
-
     }
 
     void Update()
     {
-        if(playerHealth == null)
+        if (playerHealth == null)
         {
             playerHealth = FindObjectOfType<PlayerHealth>();
+        }
+
+        
+        if (enemyHealth.enemyHealth <= 0)
+        {
+            if (enemyObject != null)
+            {
+                Destroy(enemyObject);
+            }
         }
     }
 
@@ -98,7 +107,6 @@ public class CollisionDamage : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
             spriteRenderer.color = normalColor;
             yield return new WaitForSeconds(0.05f);
-
         }
     }
 

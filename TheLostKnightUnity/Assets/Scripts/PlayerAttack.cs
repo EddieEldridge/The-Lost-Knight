@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour
     // Variables
     float timeBetweenAttack;
     public float startTimeBetweenAttack;
+    //EnemyHealth enemyHealth;
 
     public Transform attackPosition;
     public LayerMask whatIsEnemies;
@@ -27,7 +28,10 @@ public class PlayerAttack : MonoBehaviour
 
     Animator animator;
 
-
+    void Awake()
+    {
+      //  enemyHealth = FindObjectOfType<EnemyHealth>();
+    }
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -71,18 +75,17 @@ public class PlayerAttack : MonoBehaviour
                 Handheld.Vibrate();
                 timeBetweenAttack = startTimeBetweenAttack;
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, whatIsEnemies);
-
+                
                 // For loop 
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
+                    enemiesToDamage[i].GetComponent<EnemyHealth>().takeDamage(damage);
                     enemiesToDamage[i].GetComponent<CollisionDamage>().takeDamage(damage);
-                    Debug.Log("Damage dealt to player: " + damage);
                 }
                 timeBetweenAttack = startTimeBetweenAttack;
             }
 
         }
-
         else
         {
             timeBetweenAttack -= Time.deltaTime;

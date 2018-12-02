@@ -9748,40 +9748,14 @@ Prefab:
       propertyPath: moveSpots.Array.data[1]
       value: 
       objectReference: {fileID: 354510246}
-    - target: {fileID: 212784365622824382, guid: 01b4df8b0dcf0914283d8c003deee096,
+    - target: {fileID: 114385741558197320, guid: 01b4df8b0dcf0914283d8c003deee096,
         type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212784365622824382, guid: 01b4df8b0dcf0914283d8c003deee096,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.9292453
-      objectReference: {fileID: 0}
-    - target: {fileID: 212784365622824382, guid: 01b4df8b0dcf0914283d8c003deee096,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.9292453
+      propertyPath: enemyMaxHealth
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &973197826 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1576233333379856, guid: 01b4df8b0dcf0914283d8c003deee096,
-    type: 2}
-  m_PrefabInternal: {fileID: 973197825}
---- !u!122 &973197827
-Halo:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 973197826}
-  m_Enabled: 1
-  m_Color:
-    serializedVersion: 2
-    rgba: 1879048191
-  m_Size: 5
 --- !u!1 &977406903
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,5 +31,11 @@ public class EnemyHealth : MonoBehaviour {
         Destroy(gameObject);
     }
 
+	public void takeDamage(int damageDealt)
+    {
+        Handheld.Vibrate();
+        enemyHealth -= damageDealt;
+    }
+
 	
 }
