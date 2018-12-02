@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9528302, g: 0.91237986, b: 0.91237986, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11901,40 +11901,14 @@ Prefab:
       propertyPath: m_Name
       value: EnemyPrefab (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 212784365622824382, guid: 01b4df8b0dcf0914283d8c003deee096,
+    - target: {fileID: 114732166683844060, guid: 01b4df8b0dcf0914283d8c003deee096,
         type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212784365622824382, guid: 01b4df8b0dcf0914283d8c003deee096,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.9292453
-      objectReference: {fileID: 0}
-    - target: {fileID: 212784365622824382, guid: 01b4df8b0dcf0914283d8c003deee096,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.9292453
+      propertyPath: moveSpeed
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b4df8b0dcf0914283d8c003deee096, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1716324871 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1576233333379856, guid: 01b4df8b0dcf0914283d8c003deee096,
-    type: 2}
-  m_PrefabInternal: {fileID: 1716324870}
---- !u!122 &1716324872
-Halo:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1716324871}
-  m_Enabled: 1
-  m_Color:
-    serializedVersion: 2
-    rgba: 1879048191
-  m_Size: 5
 --- !u!1 &1748369518
 GameObject:
   m_ObjectHideFlags: 0
@@ -12643,7 +12617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9528302, g: 0.91237986, b: 0.91237986, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

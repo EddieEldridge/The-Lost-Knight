@@ -13992,6 +13992,16 @@ Prefab:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114758614220654840, guid: 7f155148d7a18674db4fd5995e027544,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 121221253}
+    - target: {fileID: 114758614220654840, guid: 7f155148d7a18674db4fd5995e027544,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TradeButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f155148d7a18674db4fd5995e027544, type: 2}
   m_IsPrefabAsset: 0
@@ -15965,7 +15975,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 48c05603224655a44be7f53fea6c1587, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e39436de75459740b9ad35cfe1f0e9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

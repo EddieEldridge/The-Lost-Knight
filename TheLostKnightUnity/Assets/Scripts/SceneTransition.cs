@@ -33,5 +33,11 @@ public class SceneTransition : MonoBehaviour {
             SceneManager.LoadScene("FallenKnightsLair");
             PlayerPrefs.SetInt("fallenKnightsLairUnlocked", 1);
         }
+        
+        if(collidingWith.CompareTag("Player") && sceneName=="FallenKnightsLair")
+        {
+            SceneManager.LoadScene("MainMenu");
+            PlayerPrefs.SetInt("fallenKnightsLairUnlocked", 1);
+        }
     }
 }

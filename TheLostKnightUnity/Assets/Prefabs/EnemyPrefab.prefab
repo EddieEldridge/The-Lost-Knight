@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114385741558197320}
   - component: {fileID: 198099812743455742}
   - component: {fileID: 199631286201239792}
-  - component: {fileID: 122209553572951386}
+  - component: {fileID: 122852531993294782}
   m_Layer: 9
   m_Name: EnemyPrefab
   m_TagString: Enemy
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576233333379856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 629.4, y: -76.3, z: 0}
+  m_LocalPosition: {x: 888.83, y: -76.3, z: 0}
   m_LocalScale: {x: 7.406021, y: 7.412234, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -132,8 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceccdbfe65edc734591736a7ede4496c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
-  startWaitTime: 3
+  moveSpeed: 10
+  startWaitTime: 1
   moveSpots:
   - {fileID: 0}
   - {fileID: 0}
@@ -143,7 +143,7 @@ MonoBehaviour:
   enemy: {fileID: 1576233333379856}
   isPatrolling: 1
   isChasing: 0
---- !u!122 &122209553572951386
+--- !u!122 &122852531993294782
 Halo:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

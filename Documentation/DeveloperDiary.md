@@ -24,6 +24,10 @@
 * Economy system with persistence gold and a merchant NPc where gold can be spent on upgrades
 * Enemy patrolling and chasing behaviour
 * Player health and stamina bars that update dynamically
+* Soft lighting effects
+* Custom UI
+* Touch controls
+
 
 ## 7th October, 2018
 This is the first entry in my developer diary. This diary will be kept to keep track

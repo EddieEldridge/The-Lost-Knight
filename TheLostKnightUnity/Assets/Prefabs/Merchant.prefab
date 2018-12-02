@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1385327610776762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1267.2, y: -79.1, z: 8.578638}
+  m_LocalPosition: {x: 872.2, y: -130.6, z: 8.578638}
   m_LocalScale: {x: 4.239681, y: 4.399003, z: 1}
   m_Children:
   - {fileID: 224372523708615418}
@@ -92,7 +92,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.8137698, y: 1.0420649}
+  m_Offset: {x: 2.5493302, y: 1.0420649}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -103,7 +103,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.973941, y: 5.3422136}
+  m_Size: {x: 13.143443, y: 5.3422136}
   m_EdgeRadius: 0
 --- !u!114 &114053073327896576
 MonoBehaviour:
@@ -184,12 +184,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
 --- !u!114 &114839481764643948
 MonoBehaviour:
@@ -266,7 +260,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1a014c4ff511635488f8dcf694731e40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.85, y: 1.85}
@@ -336,6 +330,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 18.4, y: 18.04}
+  m_AnchoredPosition: {x: 38.2, y: 33.9}
   m_SizeDelta: {x: 220.84, y: 176.04}
   m_Pivot: {x: 0.5, y: 0.49999997}

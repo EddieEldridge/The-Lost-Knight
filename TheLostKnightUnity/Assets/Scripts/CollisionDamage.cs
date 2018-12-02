@@ -58,7 +58,6 @@ public class CollisionDamage : MonoBehaviour
         if (collidingWith.CompareTag("Enemy"))
         {
             Handheld.Vibrate();
-            particleSystem.Play();
             StartCoroutine(Flash());
             enemyHealth.enemyHealth -= damageDealt;
         }
