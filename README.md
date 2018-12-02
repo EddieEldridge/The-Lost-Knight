@@ -15,7 +15,6 @@
 ## Description
 The Lost Knight is a 2D Action RPG game developed in the Unity engine for the Android Platform. The object of this project was to create a game using a design document designed by someone else. This was done to simulate how real development occurs. The design document for The Lost Knight can be found in the documentation section of the project.
 
-
 ## Design
 The design document for this project can be found [here](https://github.com/EddieEldridge/The-Lost-Knight/blob/master/Documentation/Lost-Knight-Design-Document.pdf).
 
@@ -36,9 +35,6 @@ Included in the <b>Documentation</b> folder of the project are a <i>Developer Di
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Paint.net](https://www.getpaint.net/)
 
-## Resources
-
-## Acknowledgements
-
 ## Developers
-Edward Eldridge
+* Developement by Edward Eldridge
+* Design by Donal Burke

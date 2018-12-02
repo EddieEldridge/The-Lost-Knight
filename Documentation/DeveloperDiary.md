@@ -142,3 +142,22 @@ I sent the designer of the game, Donal Burke, a link to the app and he tested th
 
 ### End
 As the designer was happy with the product, I ended my testing.
+
+## 2nd December, 2018
+I've updated the build on the Play store to version 0.9. This new update includes all the bug fixes detailed above as well as adding 2 new level, one of which includes the boss level. Below, I am going to outline all the features I have implemented so far as a summary of the development of this project.
+
+* Basic movement (Jumping, Walking, Dashing)
+* Attacking (Melee and ranged attacking)
+* Custom tilemap 
+* Custom level backgrounds, sprites and particle effects
+* 4 Levels including a tutorial level and a boss level
+* Player progression stored in local storage (Coins, Levels Completed)
+* Custom animations (Dashing, meleee attacking, ranged attacking, jumping, walking)
+* 8 Bit Chiptune Soundtrack (https://www.youtube.com/watch?v=nbhae7JUC9I)
+* Sound effects
+* Vibration effects
+* Particle effects
+* Menu's for settings, main menu, choosing levels and trading
+* Economy system with persistence gold and a merchant NPc where gold can be spent on upgrades
+* Enemy patrolling and chasing behaviour
+* Player health and stamina bars that update dynamically

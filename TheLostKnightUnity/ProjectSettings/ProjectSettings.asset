@@ -244,7 +244,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: C:/Users/Eddie/Desktop/myKeystore.keystore
-  AndroidKeyaliasName: 
+  AndroidKeyaliasName: thelostknight
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
