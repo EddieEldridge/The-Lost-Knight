@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HallowedCave.unity
     guid: b1199b55929c1964e82f4ea91181ffa6
+  - enabled: 1
+    path: Assets/Scenes/FallenKnightsLair.unity
+    guid: f08c2cde9f9663740acff00b2c5e8c53
   m_configObjects: {}

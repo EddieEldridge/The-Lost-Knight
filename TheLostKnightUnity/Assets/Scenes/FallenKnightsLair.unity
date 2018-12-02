@@ -1812,7 +1812,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.5, y: -65.2}
+  m_AnchoredPosition: {x: -5.5, y: -26}
   m_SizeDelta: {x: 199.5, y: 124.98}
   m_Pivot: {x: 1, y: 1}
 --- !u!82 &586294228
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -14388,8 +14388,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1001.3, y: 531}
-  m_SizeDelta: {x: 7, y: 7}
+  m_AnchoredPosition: {x: 1001, y: 544}
+  m_SizeDelta: {x: 7.9, y: 7.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344907346
 MonoBehaviour:
@@ -14900,7 +14900,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1556731106}
   m_LocalRotation: {x: -0, y: -0, z: 0.9999995, w: 0.0010067731}
-  m_LocalPosition: {x: 991, y: -47, z: 0}
+  m_LocalPosition: {x: 979.7, y: -72.8, z: 0}
   m_LocalScale: {x: 39.447174, y: 20.444645, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15266,7 +15266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 996.48, y: 621.21}
+  m_AnchoredPosition: {x: 996.48, y: 646}
   m_SizeDelta: {x: 0.5, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1750431207
@@ -15733,7 +15733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: -158.7}
+  m_AnchoredPosition: {x: 5, y: -135}
   m_SizeDelta: {x: 208.62, y: 144.18}
   m_Pivot: {x: 1, y: 1}
 --- !u!82 &1992044079
@@ -15867,7 +15867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

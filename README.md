@@ -20,8 +20,7 @@ The Lost Knight is a 2D Action RPG game developed in the Unity engine for the An
 The design document for this project can be found [here](https://github.com/EddieEldridge/The-Lost-Knight/blob/master/Documentation/Lost-Knight-Design-Document.pdf).
 
 ## How to run the program
-The game can be downloaded from the Play store [here]() or you can manually install the game using the appropriate .apk file found in the <b>Builds</b> folder of the project.
-
+The game can be downloaded from the Play store [here](https://play.google.com/store/apps/details?id=com.EddiEldridge.TheLostKnightAndroid) or you can manually install the game using the appropriate .apk file found in the <b>Builds</b> folder of the project.
 
 ## Documentation
 Included in the <b>Documentation</b> folder of the project are a <i>Developer Diary</i> and a <i>Design Document</i>. The developer diary contains information regarding the development of the game on a more personal level. The diary was used to keep track of development and to outline my thoughts and ideas along the development process. The design document outlines what the designer of the game wanted it to be and includes details about all aspects of the game.
