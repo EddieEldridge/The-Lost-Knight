@@ -34,6 +34,7 @@ public class CollisionDamage : MonoBehaviour
         playerHealth = FindObjectOfType<PlayerHealth>();
         enemyHealth = FindObjectOfType<EnemyHealth>();
         cameraShake = FindObjectOfType<CameraShake>();
+        
         enemyObject = enemyHealth.GetComponent<GameObject>();
 
         correctLayer = gameObject.layer;
