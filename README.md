@@ -12,6 +12,9 @@
 * [Resources](#resources)
 * [Wiki](https://github.com/EddieEldridge/UnityZephyr/wiki)
 
+[<img src="https://www.americanbeerbar.com/storage/app/media/logo_googleplay.png">](https://play.google.com/store/apps/details?id=com.EddiEldridge.TheLostKnightAndroid)
+
+
 ## Description
 The Lost Knight is a 2D Action RPG game developed in the Unity engine for the Android Platform. The object of this project was to create a game using a design document designed by someone else. This was done to simulate how real development occurs. The design document for The Lost Knight can be found in the documentation section of the project.
 
