@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isJumping", true);
         }
-
+        print(playerRB.velocity);
     }
 
     void Start()

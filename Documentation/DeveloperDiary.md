@@ -1,7 +1,8 @@
 ![](https://raw.githubusercontent.com/EddieEldridge/The-Lost-Knight/master/img/TheLostKnight.png)
 
 <p align="center">
-  <b>This is a development diary for my Unity project, The Lost Knight. This diary will be used to keep track of development and to outline my thoughts and ideas along the development process.</b><br>
+  <b>This is a development diary for my Unity project, The Lost Knight. This diary will be used to keep track of development and to outline my thoughts and ideas along the development process. This diary was maintained throughout the development of the game, evidence of this can be found <a href="https://github.com/EddieEldridge/The-Lost-Knight/commits/master/Documentation/DeveloperDiary.md">here.</a>
+</b><br>
 </p>
 
 <p align="center">
@@ -21,12 +22,13 @@
 * Vibration effects
 * Particle effects
 * Menu's for settings, main menu, choosing levels and trading
-* Economy system with persistence gold and a merchant NPc where gold can be spent on upgrades
+* Economy system with persistence gold and a merchant NPC where gold can be spent on upgrades
 * Enemy patrolling and chasing behaviour
 * Player health and stamina bars that update dynamically
 * Soft lighting effects
 * Custom UI
 * Touch controls
+* Social Features (Login, Logout from Facebook, Send game invites via Facebook, Share the game via Facebook)
 
 
 ## 7th October, 2018
@@ -169,6 +171,14 @@ As the designer was happy with the product, I ended my testing.
 
 ## 2nd December, 2018
 I've updated the build on the Play store to version 0.9. This new update includes all the bug fixes detailed above as well as adding 2 new level, one of which includes the boss level. Below, I am going to outline all the features I have implemented so far as a summary of the development of this project. I am very happpy with how the game turned out. 
+
+## 6th December, 2018
+I've updated the APK on the Play store to Version 1.1 which includes some bugfixes as well as some minor changes to the levels.
+
+### Known Bugs
+* Sometimes the player will randomly stop moving
+* The merchant on the boss level doesn't work correctly in certain situations
+* Arrows don't show a hit effect even though they are damaging the enemy
 
 ### What would I do differently?
 * Use a state machine to control player and enemy states
