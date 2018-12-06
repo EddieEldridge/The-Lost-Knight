@@ -10,6 +10,10 @@
 <a href="https://github.com/EddieEldridge/The-Lost-Knight">You can track the development of this project here.</a>
 </p>
 
+<p align="center">
+<a href="https://play.google.com/store/apps/details?id=com.EddiEldridge.TheLostKnightAndroid&fbclid=IwAR0g_4WEKFMsQ1eOAYlT-qMRERVADFQnXmqslwACZMFRZ5G8USVG7PiSEkQ">You can find the game on the Google Play Store here.</a>
+</p>
+
 # Main features
 * Basic movement (Jumping, Walking, Dashing)
 * Attacking (Melee and ranged attacking)
